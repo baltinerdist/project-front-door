@@ -1,0 +1,1951 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Amtgard — The Chronicle of the Realms</title>
+    <meta
+      name="description"
+      content="Amtgard is a worldwide fellowship of fighters, mages, healers and craftsfolk who gather every weekend to wage foam-and-honor war upon open fields. The chronicle awaits — take up your blade."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&family=Pirata+One&family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300;1,500&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ░░░ GRAIN + VIGNETTE OVERLAYS ░░░ -->
+    <div class="grain" aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
+
+    <!-- ░░░ TORCH CURSOR ░░░ -->
+    <div class="torch" aria-hidden="true"></div>
+
+    <!-- ░░░ TOP RIBBON ░░░ -->
+    <header class="ribbon">
+      <div class="ribbon__mark">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <use href="#sigil-cross-swords" />
+        </svg>
+        <span>Amtgard</span>
+        <em>est. anno domini MCMLXXXIII</em>
+      </div>
+      <nav class="ribbon__nav" aria-label="Primary">
+        <div class="ribbon__menu" data-dropdown>
+          <button class="ribbon__menu-trigger" type="button" aria-haspopup="true" aria-expanded="false">
+            About
+            <svg class="ribbon__caret" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1 L6 6 L11 1" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <ul class="ribbon__menu-panel" role="menu">
+            <li role="none"><a href="mission.html" role="menuitem">Our Mission</a></li>
+            <li role="none"><a href="board.html" role="menuitem">Board of Directors</a></li>
+            <li role="none"><a href="volunteers.html" role="menuitem">Volunteer Leaders</a></li>
+          </ul>
+        </div>
+        <a href="#classes">Classes</a>
+        <a href="#realms">Realms</a>
+        <a href="#wars">Wars</a>
+        <a href="#arms">Arms</a>
+        <a href="#crafts">Arts</a>
+        <div class="ribbon__menu" data-dropdown>
+          <button class="ribbon__menu-trigger" type="button" aria-haspopup="true" aria-expanded="false">
+            Get Started
+            <svg class="ribbon__caret" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1 L6 6 L11 1" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <ul class="ribbon__menu-panel" role="menu">
+            <li role="none"><a href="learn.html" role="menuitem">Learn the Basics</a></li>
+            <li role="none"><a href="start.html" role="menuitem">Start a Chapter</a></li>
+            <li role="none"><a href="https://ork.amtgard.com/orkui/index.php?Route=Atlas" target="_blank" rel="noopener noreferrer" role="menuitem">Find a Chapter <span aria-hidden="true">↗</span></a></li>
+          </ul>
+        </div>
+        <a href="#join" class="ribbon__cta">Find a Park →</a>
+      </nav>
+    </header>
+
+    <!-- ░░░ HERO ░░░ -->
+    <section class="hero" id="top">
+      <div class="hero__photo" aria-hidden="true">
+        <img src="img/duel.jpg" alt="" />
+        <div class="hero__photo-shroud"></div>
+      </div>
+      <div class="hero__frame">
+        <div class="hero__corner hero__corner--tl" aria-hidden="true">
+          <svg viewBox="0 0 120 120"><use href="#corner-flourish" /></svg>
+        </div>
+        <div class="hero__corner hero__corner--tr" aria-hidden="true">
+          <svg viewBox="0 0 120 120"><use href="#corner-flourish" /></svg>
+        </div>
+        <div class="hero__corner hero__corner--bl" aria-hidden="true">
+          <svg viewBox="0 0 120 120"><use href="#corner-flourish" /></svg>
+        </div>
+        <div class="hero__corner hero__corner--br" aria-hidden="true">
+          <svg viewBox="0 0 120 120"><use href="#corner-flourish" /></svg>
+        </div>
+
+        <p class="hero__eyebrow">
+          <span class="hero__star">✶</span>
+          A worldwide fellowship of foam, steel and honor
+          <span class="hero__star">✶</span>
+        </p>
+
+        <h1 class="hero__title">
+          <span class="hero__title-line hero__title-line--small">Folio I &nbsp;·&nbsp; The Chronicle of</span>
+          <span class="hero__title-line hero__title-line--big">Amtgard</span>
+        </h1>
+
+        <p class="hero__lede">
+          Every weekend, on fields from El Paso to Helsinki, peasants
+          become paladins. Wizards hurl spells of bright cloth. Healers
+          raise the fallen. Steel — the gentle kind, padded and true —
+          sings against shield. <em>You are invited.</em>
+        </p>
+
+        <div class="hero__cta">
+          <a href="#join" class="btn btn--primary">
+            <span>Find Thy Park</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#sigil-arrow" /></svg>
+          </a>
+          <a href="#chronicle" class="btn btn--ghost">
+            <span>Open the Chronicle</span>
+          </a>
+        </div>
+
+        <dl class="hero__stats">
+          <div>
+            <dt>Realms chartered</dt>
+            <dd><span class="num">23</span><sup>kingdoms</sup></dd>
+          </div>
+          <div>
+            <dt>Members worldwide</dt>
+            <dd><span class="num">10k</span><sup>+ chartered</sup></dd>
+          </div>
+          <div>
+            <dt>Years afoot</dt>
+            <dd><span class="num">43</span><sup>since 1983</sup></dd>
+          </div>
+          <div>
+            <dt>Coin to play</dt>
+            <dd><span class="num">0</span><sup>show up &amp; fight</sup></dd>
+          </div>
+        </dl>
+      </div>
+
+      <!-- marching banners — all 23 kingdoms, cycled forever -->
+      <div class="hero__march" aria-hidden="true">
+        <div class="hero__march-track">
+          <span>Burning Lands</span><i>✦</i>
+          <span>Emerald Hills</span><i>✦</i>
+          <span>Celestial</span><i>✦</i>
+          <span>Iron Mountains</span><i>✦</i>
+          <span>Golden Plains</span><i>✦</i>
+          <span>Dragonspine</span><i>✦</i>
+          <span>Wetlands</span><i>✦</i>
+          <span>Goldenvale</span><i>✦</i>
+          <span>Neverwinter</span><i>✦</i>
+          <span>Rising Winds</span><i>✦</i>
+          <span>Black Spire</span><i>✦</i>
+          <span>Crystal Groves</span><i>✦</i>
+          <span>Desert Winds</span><i>✦</i>
+          <span>Tal Dagore</span><i>✦</i>
+          <span>Northern Lights</span><i>✦</i>
+          <span>Northreach</span><i>✦</i>
+          <span>Rivermoor</span><i>✦</i>
+          <span>Polaris</span><i>✦</i>
+          <span>Westmarch</span><i>✦</i>
+          <span>Viridian Outlands</span><i>✦</i>
+          <span>Winters Edge</span><i>✦</i>
+          <span>Nine Blades</span><i>✦</i>
+          <span>13 Roads</span><i>✦</i>
+          <!-- duplicate set so the loop seams invisibly -->
+          <span aria-hidden="true">Burning Lands</span><i aria-hidden="true">✦</i>
+          <span aria-hidden="true">Emerald Hills</span><i aria-hidden="true">✦</i>
+          <span aria-hidden="true">Celestial</span><i aria-hidden="true">✦</i>
+          <span aria-hidden="true">Iron Mountains</span><i aria-hidden="true">✦</i>
+          <span aria-hidden="true">Golden Plains</span><i aria-hidden="true">✦</i>
+          <span aria-hidden="true">Dragonspine</span><i aria-hidden="true">✦</i>
+          <span aria-hidden="true">Wetlands</span><i aria-hidden="true">✦</i>
+          <span aria-hidden="true">Goldenvale</span><i aria-hidden="true">✦</i>
+          <span aria-hidden="true">Neverwinter</span><i aria-hidden="true">✦</i>
+          <span aria-hidden="true">Rising Winds</span><i aria-hidden="true">✦</i>
+          <span aria-hidden="true">Black Spire</span><i aria-hidden="true">✦</i>
+          <span aria-hidden="true">Crystal Groves</span><i aria-hidden="true">✦</i>
+          <span aria-hidden="true">Desert Winds</span><i aria-hidden="true">✦</i>
+          <span aria-hidden="true">Tal Dagore</span><i aria-hidden="true">✦</i>
+          <span aria-hidden="true">Northern Lights</span><i aria-hidden="true">✦</i>
+          <span aria-hidden="true">Northreach</span><i aria-hidden="true">✦</i>
+          <span aria-hidden="true">Rivermoor</span><i aria-hidden="true">✦</i>
+          <span aria-hidden="true">Polaris</span><i aria-hidden="true">✦</i>
+          <span aria-hidden="true">Westmarch</span><i aria-hidden="true">✦</i>
+          <span aria-hidden="true">Viridian Outlands</span><i aria-hidden="true">✦</i>
+          <span aria-hidden="true">Winters Edge</span><i aria-hidden="true">✦</i>
+          <span aria-hidden="true">Nine Blades</span><i aria-hidden="true">✦</i>
+          <span aria-hidden="true">13 Roads</span><i aria-hidden="true">✦</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░░ CHRONICLE / WHAT IS AMTGARD ░░░ -->
+    <section class="chronicle" id="chronicle">
+      <div class="chronicle__rule">
+        <span>Folio II</span>
+        <em>Wherein the curious traveler is told what manner of thing this is</em>
+      </div>
+
+      <div class="chronicle__body">
+        <h2 class="chronicle__heading">
+          A game of honor, played in the open air, with weapons that do not bite.
+        </h2>
+
+        <div class="chronicle__columns">
+          <p class="chronicle__lead">
+            <span class="dropcap">A</span>mtgard is a live-action roleplaying
+            game of medieval and fantasy combat — a sport, a craft, and a
+            chosen family wrapped together. Foam-padded swords stand in for
+            steel; bright-coloured cloth balls for fireballs; and a thousand
+            small kindnesses for the chivalry of a long-vanished age. It is
+            played for free, every weekend, on a public field near you.
+          </p>
+
+          <p>
+            Begin as a peasant with nothing but a borrowed blade. Climb,
+            duel and quest your way to knighthood. Choose a class — warrior,
+            wizard, healer, scout, druid, paladin — and grow the deeds of
+            your <em>persona</em> through the years. Stitch your own garb.
+            Carve your own crest. Captain a company. Reign as a monarch.
+          </p>
+
+          <p>
+            We have no gatekeepers, no audition, and no costume bar. Show up
+            in jeans and a t-shirt and someone will hand you a sword,
+            explain the rules in eight minutes, and call you <em>cousin</em>
+            by sundown.
+          </p>
+        </div>
+
+        <aside class="chronicle__aside">
+          <h3>How the field plays</h3>
+          <ol>
+            <li><b>Be safe.</b> Foam weapons. Tap blows. No grappling.</li>
+            <li><b>Be honorable.</b> Take your hits. Lift the fallen.</li>
+            <li><b>Be welcoming.</b> Every newcomer is a future knight.</li>
+            <li><b>Be creative.</b> Garb, lore and craft are half the joy.</li>
+          </ol>
+          <div class="chronicle__seal" aria-hidden="true">
+            <svg viewBox="0 0 100 100"><use href="#sigil-seal" /></svg>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ░░░ CLASSES ░░░ -->
+    <section class="classes" id="classes">
+      <div class="section__title">
+        <p class="section__folio">Folio III</p>
+        <h2>Choose <em>thy</em> calling</h2>
+        <p class="section__sub">
+          Twelve archetypes await — split between the magic-users and
+          the martial classes. Some march in steel, some in robes, some
+          not at all. Hover a tome to learn its art.
+        </p>
+      </div>
+
+      <!-- Editorial spread image opening the folio -->
+      <figure class="classes__feature">
+        <div class="classes__feature-frame">
+          <img src="img/heroes.jpg" alt="An armoured Amtgard fighter in custom dragon-scale plate walks the field next to a player in a witch-hat and goggles — a knight and a wizard side by side." />
+        </div>
+        <figcaption>
+          <span class="classes__feature-mark">— a plate by hand</span>
+          <p>
+            <em>The marshal and the magister.</em> The class-line of
+            Amtgard runs from the heaviest plate ever hammered out of a
+            backyard anvil to the wide-brimmed hat of the wandering
+            spell-tome. Both are welcome on the same field at the same
+            hour.
+          </p>
+        </figcaption>
+      </figure>
+
+      <div class="class-grid">
+        <!-- WARRIOR -->
+        <article class="class-card" data-tone="purple">
+          <div class="class-card__band">
+            <span class="class-card__no">i</span>
+            <span class="class-card__hp">— martial —</span>
+          </div>
+          <div class="class-card__sigil">
+            <svg viewBox="0 0 64 64"><use href="#class-warrior" /></svg>
+          </div>
+          <h3>Warrior</h3>
+          <p class="class-card__tag">The line that holds.</p>
+          <p class="class-card__body">
+            Plate, large shield, and the full armoury of melee. The
+            Warrior is the keystone of the shield-wall and the
+            anchor of the open duel — <em>Harden</em> the kit,
+            <em>Shake It Off</em>, and stand when others kneel.
+            Simple to take up; a lifetime to perfect.
+          </p>
+          <ul class="class-card__abilities">
+            <li>Harden · Shake It Off</li>
+            <li>True Grit · Ancestral Armor</li>
+            <li>Purple sash · 6 armour</li>
+          </ul>
+        </article>
+
+        <!-- WIZARD -->
+        <article class="class-card" data-tone="yellow">
+          <div class="class-card__band">
+            <span class="class-card__no">ii</span>
+            <span class="class-card__hp">— magic-user —</span>
+          </div>
+          <div class="class-card__sigil">
+            <svg viewBox="0 0 64 64"><use href="#class-wizard" /></svg>
+          </div>
+          <h3>Wizard</h3>
+          <p class="class-card__tag">Cloth-fire and cleverness.</p>
+          <p class="class-card__body">
+            A memorised tome and a fistful of bright cloth. The
+            Wizard chooses the day's loadout from spells of
+            <em>Flame</em>, <em>Spirit</em>, and <em>Subdual</em> —
+            <em>Force Bolt</em> across the field, <em>Entangle</em>
+            the charging knight, <em>Teleport</em> clear when the
+            line breaks. Range, control, and a quick wit.
+          </p>
+          <ul class="class-card__abilities">
+            <li>Force Bolt · Entangle</li>
+            <li>Suppression Bolt · Teleport</li>
+            <li>Yellow sash · no armour</li>
+          </ul>
+        </article>
+
+        <!-- HEALER -->
+        <article class="class-card" data-tone="red">
+          <div class="class-card__band">
+            <span class="class-card__no">iii</span>
+            <span class="class-card__hp">— magic-user —</span>
+          </div>
+          <div class="class-card__sigil">
+            <svg viewBox="0 0 64 64"><use href="#class-healer" /></svg>
+          </div>
+          <h3>Healer</h3>
+          <p class="class-card__tag">No one falls alone.</p>
+          <p class="class-card__body">
+            White cloth and a steady count return wounded allies to
+            the field. The Healer mends with <em>Heal</em>, lifts
+            curses with <em>Release</em>, and shields the line with
+            <em>Blessing Against Wounds</em>. Beloved by every army
+            that has ever drawn breath.
+          </p>
+          <ul class="class-card__abilities">
+            <li>Heal · Blessing Against Wounds</li>
+            <li>Release · Adaptive Blessing</li>
+            <li>Red sash · no armour</li>
+          </ul>
+        </article>
+
+        <!-- SCOUT -->
+        <article class="class-card" data-tone="green">
+          <div class="class-card__band">
+            <span class="class-card__no">iv</span>
+            <span class="class-card__hp">— martial —</span>
+          </div>
+          <div class="class-card__sigil">
+            <svg viewBox="0 0 64 64"><use href="#class-scout" /></svg>
+          </div>
+          <h3>Scout</h3>
+          <p class="class-card__tag">Loose at three hundred paces.</p>
+          <p class="class-card__body">
+            Bow, blade, and field-craft. Scouts work the flanks —
+            <em>Tracking</em> the enemy's shape, <em>Shadow Step</em>
+            through the gap, <em>Pinning Arrow</em> to fix a runner
+            where they stand. A small kit that turns a war from a
+            hundred feet away.
+          </p>
+          <ul class="class-card__abilities">
+            <li>Tracking · Shadow Step</li>
+            <li>Pinning Arrow · Dispel Magic</li>
+            <li>Green sash · 3 armour</li>
+          </ul>
+        </article>
+
+        <!-- MONK -->
+        <article class="class-card" data-tone="grey">
+          <div class="class-card__band">
+            <span class="class-card__no">v</span>
+            <span class="class-card__hp">— martial —</span>
+          </div>
+          <div class="class-card__sigil">
+            <svg viewBox="0 0 64 64"><use href="#class-monk" /></svg>
+          </div>
+          <h3>Monk</h3>
+          <p class="class-card__tag">Empty hand, full heart.</p>
+          <p class="class-card__body">
+            No shield and the lightest of kit, only the staff and a
+            vow of simplicity. The Monk turns arrows aside with
+            <em>Missile Block</em>, claims a spot of stillness with
+            <em>Sanctuary</em>, and alone among the orders calls the
+            fallen back with <em>Resurrect</em>. Patience is the
+            weapon.
+          </p>
+          <ul class="class-card__abilities">
+            <li>Missile Block · Sanctuary</li>
+            <li>Resurrect · Heal</li>
+            <li>Grey sash · 1 armour</li>
+          </ul>
+        </article>
+
+        <!-- DRUID -->
+        <article class="class-card" data-tone="brown">
+          <div class="class-card__band">
+            <span class="class-card__no">vi</span>
+            <span class="class-card__hp">— magic-user —</span>
+          </div>
+          <div class="class-card__sigil">
+            <svg viewBox="0 0 64 64"><use href="#class-druid" /></svg>
+          </div>
+          <h3>Druid</h3>
+          <p class="class-card__tag">The grove answers.</p>
+          <p class="class-card__body">
+            Half-healer, half-shaper. The Druid roots the unwary in
+            foot-thick <em>Entangle</em>, hardens an ally's kit
+            with <em>Barkskin</em> and <em>Imbue Armor</em>, and
+            mends wounds with a quiet <em>Heal</em>. Versatile,
+            evergreen, and quietly indispensable.
+          </p>
+          <ul class="class-card__abilities">
+            <li>Entangle · Barkskin</li>
+            <li>Imbue Armor · Heal</li>
+            <li>Brown sash · no armour</li>
+          </ul>
+        </article>
+
+        <!-- PALADIN -->
+        <article class="class-card" data-tone="gold">
+          <div class="class-card__band">
+            <span class="class-card__no">vii</span>
+            <span class="class-card__hp">— martial —</span>
+          </div>
+          <div class="class-card__sigil">
+            <svg viewBox="0 0 64 64"><use href="#class-paladin" /></svg>
+          </div>
+          <h3>Paladin</h3>
+          <p class="class-card__tag">Bright sword, brighter oath.</p>
+          <p class="class-card__body">
+            A reserved order, taken only after long service in
+            another class. The Paladin marries plate and shield to a
+            small handful of holy graces — <em>Awe</em> the foe,
+            <em>Greater Heal</em> the wounded, <em>Greater
+            Resurrect</em> the lost, and <em>Protection from
+            Magic</em> for those who stand close. Bound by code;
+            bright by design.
+          </p>
+          <ul class="class-card__abilities">
+            <li>Awe · Greater Heal</li>
+            <li>Greater Resurrect · Protection from Magic</li>
+            <li>Reserved · 6th level · gold sash · 4 armour</li>
+          </ul>
+        </article>
+
+        <!-- ANTI-PALADIN -->
+        <article class="class-card" data-tone="silver">
+          <div class="class-card__band">
+            <span class="class-card__no">viii</span>
+            <span class="class-card__hp">— martial —</span>
+          </div>
+          <div class="class-card__sigil">
+            <svg viewBox="0 0 64 64"><use href="#class-anti" /></svg>
+          </div>
+          <h3>Anti-Paladin</h3>
+          <p class="class-card__tag">A blade against the light.</p>
+          <p class="class-card__body">
+            The Paladin's mirror — a reserved order of steel and
+            disruption, won only after long service elsewhere. The
+            Anti-Paladin presses the line with <em>Brutal
+            Strike</em> and <em>Flame Blade</em>, unsettles it with
+            <em>Terror</em>, and draws strength from the
+            already-fallen with <em>Steal Life Essence</em>.
+            Aggression as discipline.
+          </p>
+          <ul class="class-card__abilities">
+            <li>Terror · Brutal Strike</li>
+            <li>Flame Blade · Steal Life Essence</li>
+            <li>Reserved · 6th level · silver sash · 4 armour</li>
+          </ul>
+        </article>
+
+        <!-- BARD -->
+        <article class="class-card" data-tone="blue">
+          <div class="class-card__band">
+            <span class="class-card__no">ix</span>
+            <span class="class-card__hp">— magic-user —</span>
+          </div>
+          <div class="class-card__sigil">
+            <svg viewBox="0 0 64 64"><use href="#class-bard" /></svg>
+          </div>
+          <h3>Bard</h3>
+          <p class="class-card__tag">Songs that sharpen swords.</p>
+          <p class="class-card__body">
+            The hardest class to play, and the most beloved when
+            played well. The Bard rallies the line with
+            <em>Song of Determination</em> and <em>Song of
+            Battle</em>, lifts a kneeling friend with
+            <em>Greater Release</em>, and turns the day with a
+            well-aimed <em>Insult</em>. Keeper of the chronicle you
+            read at year's end.
+          </p>
+          <ul class="class-card__abilities">
+            <li>Song of Battle · Song of Determination</li>
+            <li>Greater Release · Insult</li>
+            <li>Blue sash · no armour</li>
+          </ul>
+        </article>
+
+        <!-- ARCHER (with hover-reveal photo) -->
+        <article class="class-card class-card--has-photo" data-tone="orange">
+          <div class="class-card__photo" aria-hidden="true">
+            <img src="img/class-archer.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="class-card__band">
+            <span class="class-card__no">x</span>
+            <span class="class-card__hp">— martial —</span>
+          </div>
+          <div class="class-card__sigil">
+            <svg viewBox="0 0 64 64"><use href="#class-archer" /></svg>
+          </div>
+          <h3>Archer</h3>
+          <p class="class-card__tag">Specialist of the long shot.</p>
+          <p class="class-card__body">
+            Bow first, blade second, kit kept light. Where the Scout
+            has speed, the Archer has reach and an inventory of
+            enchanted shafts — <em>Destruction Arrow</em> against
+            shield and plate, <em>Pinning Arrow</em> to stop a
+            runner, <em>Phase Arrow</em> through the cleverest
+            cover. <em>Reload</em> and again.
+          </p>
+          <ul class="class-card__abilities">
+            <li>Destruction Arrow · Pinning Arrow</li>
+            <li>Phase Arrow · Reload</li>
+            <li>Orange sash · 2 armour</li>
+          </ul>
+        </article>
+
+        <!-- ASSASSIN -->
+        <article class="class-card" data-tone="black">
+          <div class="class-card__band">
+            <span class="class-card__no">xi</span>
+            <span class="class-card__hp">— martial —</span>
+          </div>
+          <div class="class-card__sigil">
+            <svg viewBox="0 0 64 64"><use href="#class-assassin" /></svg>
+          </div>
+          <h3>Assassin</h3>
+          <p class="class-card__tag">A step the line never sees.</p>
+          <p class="class-card__body">
+            Stealth, mobility, and the timed strike. The Assassin
+            slips through the wall with <em>Shadow Step</em> and
+            <em>Blink</em>, stalls a foe with <em>Hold Person</em>,
+            and marks a target with <em>Assassinate</em>. Hooded,
+            light-footed, and gone before the call goes up.
+          </p>
+          <ul class="class-card__abilities">
+            <li>Shadow Step · Blink</li>
+            <li>Hold Person · Assassinate</li>
+            <li>Black sash · 2 armour</li>
+          </ul>
+        </article>
+
+        <!-- BARBARIAN -->
+        <article class="class-card" data-tone="white">
+          <div class="class-card__band">
+            <span class="class-card__no">xii</span>
+            <span class="class-card__hp">— martial —</span>
+          </div>
+          <div class="class-card__sigil">
+            <svg viewBox="0 0 64 64"><use href="#class-barbarian" /></svg>
+          </div>
+          <h3>Barbarian</h3>
+          <p class="class-card__tag">A storm of axe and lung.</p>
+          <p class="class-card__body">
+            The wild line-breaker — war-painted, medium shield, kit
+            kept light. The Barbarian counts <em>Rage</em> aloud
+            through shields and armour, opens a path with
+            <em>Berserk</em> and <em>Brutal Strike</em>, and shrugs
+            off a wound with <em>Adrenaline</em>. Momentum where
+            finesse will not avail.
+          </p>
+          <ul class="class-card__abilities">
+            <li>Rage · Berserk</li>
+            <li>Brutal Strike · Adrenaline</li>
+            <li>White sash · 3 armour</li>
+          </ul>
+        </article>
+      </div>
+
+      <p class="classes__footnote">
+        Twelve archetypes in all. The Reeve (the rules-keeper, hat
+        askew) and the humble Peasant (the default state, from whom
+        all knights begin) are not classes but stations of the field.
+      </p>
+    </section>
+
+    <!-- ░░░ PHOTO BAND I — ON HONOR ░░░ -->
+    <section class="band band--line" aria-labelledby="band-line-heading">
+      <div class="band__photo">
+        <img src="img/line.jpg" alt="Two armoured Amtgard fighters in chainmail and quilted gambesons step forward with polearms drawn, surrounded by their company on the field." />
+      </div>
+      <div class="band__inner">
+        <p class="band__eyebrow">Field Report · Spring War, Folio MMXXV</p>
+        <blockquote class="band__quote" id="band-line-heading">
+          <span class="band__mark" aria-hidden="true">“</span>
+          I came to the park in jeans and an old t-shirt. They handed me
+          a sword, taught me to die well, and called me <em>cousin</em>
+          before sundown.
+        </blockquote>
+        <p class="band__attrib">— a squire of the Iron Mountains, recruited 14 days prior</p>
+      </div>
+    </section>
+
+    <!-- ░░░ REALMS / KINGDOMS ░░░ -->
+    <section class="realms" id="realms">
+      <div class="section__title section__title--center">
+        <p class="section__folio">Folio IV</p>
+        <h2>The <em>known</em> world</h2>
+        <p class="section__sub">
+          One Game, many crowns. Twenty-three sovereign Kingdoms divide
+          the map between them, each with its own court, calendar of
+          wars, and famous houses. Six are listed here.
+        </p>
+      </div>
+
+      <div class="realms__grid">
+        <article class="realm" style="--accent:#C2410C;">
+          <header>
+            <span class="realm__crown">♛</span>
+            <h3>Burning Lands</h3>
+            <p>The First Kingdom · est. 1983 · El Paso, TX</p>
+          </header>
+          <p>
+            Where it all began. The crucible of every rule and tradition.
+            Hosts the <em>Gathering of the Kingdoms</em> in the New
+            Mexico mountains — the oldest event on the calendar.
+          </p>
+        </article>
+
+        <article class="realm" style="--accent:#3F6A3A;">
+          <header>
+            <span class="realm__crown">♛</span>
+            <h3>Emerald Hills</h3>
+            <p>The Second Kingdom · est. 1988 · DFW &amp; the plains</p>
+          </header>
+          <p>
+            The second crown to be raised. Spans north Texas, Oklahoma
+            and Arkansas, and fields one of the densest concentrations of
+            knights in the known game.
+          </p>
+        </article>
+
+        <article class="realm" style="--accent:#7A6A4A;">
+          <header>
+            <span class="realm__crown">♛</span>
+            <h3>Iron Mountains</h3>
+            <p>Kingdom in 1992 · Colorado highlands</p>
+          </header>
+          <p>
+            Thin air, sharp wits, and famous mountain wars. Hosts
+            <em>Rakis</em>, the summer coronation held among the dunes
+            and ponderosa of the high country.
+          </p>
+        </article>
+
+        <article class="realm" style="--accent:#C9A961;">
+          <header>
+            <span class="realm__crown">♛</span>
+            <h3>Goldenvale</h3>
+            <p>Kingdom in 1995 · New England</p>
+          </header>
+          <p>
+            Founded in New Hampshire and grown across the
+            stone-walled north-east. Disciplined courts, harsh winters,
+            and a tradition of long-form rapier.
+          </p>
+        </article>
+
+        <article class="realm" style="--accent:#8B3A3A;">
+          <header>
+            <span class="realm__crown">♛</span>
+            <h3>Crystal Groves</h3>
+            <p>Kingdom in 2007 · the Mid-Atlantic</p>
+          </header>
+          <p>
+            Maryland to Pennsylvania. Genteel courts, fierce duels, and
+            a tournament tradition that draws fighters down from the
+            New England courts every spring.
+          </p>
+        </article>
+
+        <article class="realm" style="--accent:#5C7B9C;">
+          <header>
+            <span class="realm__crown">♛</span>
+            <h3>Northern Lights</h3>
+            <p>Kingdom in 2012 · Cascadia &amp; British Columbia</p>
+          </header>
+          <p>
+            They fight in mist. They fight in fern. They are unbothered.
+            Western Washington and the Canadian coast — the youngest
+            kingdom on this page, and one of the fastest growing.
+          </p>
+        </article>
+      </div>
+
+      <a class="realms__more" href="#join">
+        <span>See all twenty-three Kingdoms on the chapter map</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#sigil-arrow" /></svg>
+      </a>
+    </section>
+
+    <!-- ░░░ REALMS — MAPPED (B variant for A/B) ░░░ -->
+    <section class="realms-map" id="realms-map" aria-labelledby="realms-map-heading">
+      <div class="section__title section__title--center">
+        <p class="section__folio">Folio IV · alt</p>
+        <h2 id="realms-map-heading">The known world &mdash; <em>mapped</em></h2>
+        <p class="section__sub">
+          An alternate view of the same Folio. The realms plotted by
+          where they meet — six at a time, cycling through every
+          kingdom of the chartered world.
+        </p>
+      </div>
+
+      <div class="realms-map__stage" data-active-page="1">
+        <!-- Geographic basemap (CC0 Wikimedia Commons) -->
+        <img
+          class="realms-map__basemap"
+          src="img/north-america.svg"
+          alt="Outline map of the United States and Canada with state and provincial borders"
+        />
+        <svg
+          class="realms-map__svg"
+          viewBox="0 0 2289 1744"
+          preserveAspectRatio="xMidYMid meet"
+          role="img"
+          aria-label="Map showing six Amtgard kingdoms at a time"
+        >
+
+          <!--
+            Coordinates derived from the actual centroids of US-state and CA-province path
+            data in the BlankMap-USA-states-Canada-provinces.svg file. Each dot lands
+            inside its real state/province. Sub-state offsets place city anchors
+            (DFW north of Texas centroid, El Paso west, Houston east, etc.).
+
+            Slot anchors (line endpoints, where the cards live):
+              TL=(430,100)  TR=(1860,100)
+              ML=(430,870)  MR=(1860,870)
+              BL=(430,1620) BR=(1860,1620)
+          -->
+
+          <!-- ▼ PAGE 1 ▼ The founding 6 -->
+          <g class="rm-page" data-page="1">
+            <!-- Burning Lands (El Paso, far W. TX) → BL -->
+            <line class="rm-line" x1="1262" y1="1500" x2="430"  y2="1620" />
+            <!-- Iron Mountains (Denver, CO) → TL -->
+            <line class="rm-line" x1="1305" y1="1310" x2="430"  y2="100"  />
+            <!-- Polaris (Minneapolis, MN) → TR -->
+            <line class="rm-line" x1="1556" y1="1140" x2="1860" y2="100"  />
+            <!-- Goldenvale (Nashua, NH) → MR -->
+            <line class="rm-line" x1="1962" y1="1167" x2="1860" y2="870"  />
+            <!-- Emerald Hills (DFW, north central TX) → ML -->
+            <line class="rm-line" x1="1430" y1="1450" x2="430"  y2="870"  />
+            <!-- Wetlands (Houston, SE TX) → BR -->
+            <line class="rm-line" x1="1500" y1="1620" x2="1860" y2="1620" />
+
+            <g class="rm-dot"><circle class="rm-dot__halo" cx="1262" cy="1500" r="32" /><circle class="rm-dot__core" cx="1262" cy="1500" r="9" /></g>
+            <g class="rm-dot"><circle class="rm-dot__halo" cx="1305" cy="1310" r="32" /><circle class="rm-dot__core" cx="1305" cy="1310" r="9" /></g>
+            <g class="rm-dot"><circle class="rm-dot__halo" cx="1556" cy="1140" r="32" /><circle class="rm-dot__core" cx="1556" cy="1140" r="9" /></g>
+            <g class="rm-dot"><circle class="rm-dot__halo" cx="1962" cy="1167" r="32" /><circle class="rm-dot__core" cx="1962" cy="1167" r="9" /></g>
+            <g class="rm-dot"><circle class="rm-dot__halo" cx="1430" cy="1450" r="32" /><circle class="rm-dot__core" cx="1430" cy="1450" r="9" /></g>
+            <g class="rm-dot"><circle class="rm-dot__halo" cx="1500" cy="1620" r="32" /><circle class="rm-dot__core" cx="1500" cy="1620" r="9" /></g>
+          </g>
+
+          <!-- ▼ PAGE 2 ▼ The Pacific & Mid-Atlantic crowns -->
+          <g class="rm-page" data-page="2">
+            <!-- Northreach (Anchorage, AK inset) → TL -->
+            <line class="rm-line" x1="891"  y1="514"  x2="430"  y2="100"  />
+            <!-- Northern Lights (Seattle, W. WA) → ML -->
+            <line class="rm-line" x1="1075" y1="1015" x2="430"  y2="870"  />
+            <!-- Westmarch (Los Angeles, S. CA) → BL -->
+            <line class="rm-line" x1="1030" y1="1380" x2="430"  y2="1620" />
+            <!-- Dragonspine (Las Cruces, NM) → BL? — too crowded; route to TL? but Northreach has it -->
+            <!-- Dragonspine (Las Cruces, NM) → MR -->
+            <line class="rm-line" x1="1272" y1="1428" x2="1860" y2="870"  />
+            <!-- Celestial (Austin, central TX) → BR -->
+            <line class="rm-line" x1="1410" y1="1565" x2="1860" y2="1620" />
+            <!-- Crystal Groves (Hagerstown, MD) → TR -->
+            <line class="rm-line" x1="1874" y1="1317" x2="1860" y2="100"  />
+
+            <g class="rm-dot"><circle class="rm-dot__halo" cx="891"  cy="514"  r="32" /><circle class="rm-dot__core" cx="891"  cy="514"  r="9" /></g>
+            <g class="rm-dot"><circle class="rm-dot__halo" cx="1075" cy="1015" r="32" /><circle class="rm-dot__core" cx="1075" cy="1015" r="9" /></g>
+            <g class="rm-dot"><circle class="rm-dot__halo" cx="1030" cy="1380" r="32" /><circle class="rm-dot__core" cx="1030" cy="1380" r="9" /></g>
+            <g class="rm-dot"><circle class="rm-dot__halo" cx="1272" cy="1428" r="32" /><circle class="rm-dot__core" cx="1272" cy="1428" r="9" /></g>
+            <g class="rm-dot"><circle class="rm-dot__halo" cx="1410" cy="1565" r="32" /><circle class="rm-dot__core" cx="1410" cy="1565" r="9" /></g>
+            <g class="rm-dot"><circle class="rm-dot__halo" cx="1874" cy="1317" r="32" /><circle class="rm-dot__core" cx="1874" cy="1317" r="9" /></g>
+          </g>
+
+          <!-- ▼ PAGE 3 ▼ The Midwest, Southwest & Southeast -->
+          <g class="rm-page" data-page="3">
+            <!-- Black Spire (Portland, OR) → TL -->
+            <line class="rm-line" x1="1057" y1="1101" x2="430"  y2="100"  />
+            <!-- Rivermoor (Kansas City, W. MO) → ML -->
+            <line class="rm-line" x1="1515" y1="1380" x2="430"  y2="870"  />
+            <!-- Desert Winds (Phoenix, AZ) → BL -->
+            <line class="rm-line" x1="1150" y1="1413" x2="430"  y2="1620" />
+            <!-- Tal Dagore (St. Louis, E. MO) → TR -->
+            <line class="rm-line" x1="1620" y1="1360" x2="1860" y2="100"  />
+            <!-- Rising Winds (Indianapolis, IN) → MR -->
+            <line class="rm-line" x1="1689" y1="1316" x2="1860" y2="870"  />
+            <!-- Neverwinter (central Florida) → BR -->
+            <line class="rm-line" x1="1767" y1="1634" x2="1860" y2="1620" />
+
+            <g class="rm-dot"><circle class="rm-dot__halo" cx="1057" cy="1101" r="32" /><circle class="rm-dot__core" cx="1057" cy="1101" r="9" /></g>
+            <g class="rm-dot"><circle class="rm-dot__halo" cx="1515" cy="1380" r="32" /><circle class="rm-dot__core" cx="1515" cy="1380" r="9" /></g>
+            <g class="rm-dot"><circle class="rm-dot__halo" cx="1150" cy="1413" r="32" /><circle class="rm-dot__core" cx="1150" cy="1413" r="9" /></g>
+            <g class="rm-dot"><circle class="rm-dot__halo" cx="1689" cy="1316" r="32" /><circle class="rm-dot__core" cx="1689" cy="1316" r="9" /></g>
+            <g class="rm-dot"><circle class="rm-dot__halo" cx="1620" cy="1360" r="32" /><circle class="rm-dot__core" cx="1620" cy="1360" r="9" /></g>
+            <g class="rm-dot"><circle class="rm-dot__halo" cx="1767" cy="1634" r="32" /><circle class="rm-dot__core" cx="1767" cy="1634" r="9" /></g>
+          </g>
+
+          <!-- ▼ PAGE 4 ▼ The five youngest crowns -->
+          <g class="rm-page" data-page="4">
+            <!-- Viridian Outlands (Spokane, E. WA) → TL -->
+            <line class="rm-line" x1="1140" y1="1030" x2="430"  y2="100"  />
+            <!-- Golden Plains (Amarillo, TX panhandle) → BL -->
+            <line class="rm-line" x1="1340" y1="1395" x2="430"  y2="1620" />
+            <!-- Nine Blades (Toronto, S. ON) → TR -->
+            <line class="rm-line" x1="1700" y1="1180" x2="1860" y2="100"  />
+            <!-- 13 Roads (Springfield, IL) → MR -->
+            <line class="rm-line" x1="1626" y1="1318" x2="1860" y2="870"  />
+            <!-- Winters Edge (Atlanta, GA) → BR -->
+            <line class="rm-line" x1="1768" y1="1501" x2="1860" y2="1620" />
+
+            <g class="rm-dot"><circle class="rm-dot__halo" cx="1140" cy="1030" r="32" /><circle class="rm-dot__core" cx="1140" cy="1030" r="9" /></g>
+            <g class="rm-dot"><circle class="rm-dot__halo" cx="1340" cy="1395" r="32" /><circle class="rm-dot__core" cx="1340" cy="1395" r="9" /></g>
+            <g class="rm-dot"><circle class="rm-dot__halo" cx="1700" cy="1180" r="32" /><circle class="rm-dot__core" cx="1700" cy="1180" r="9" /></g>
+            <g class="rm-dot"><circle class="rm-dot__halo" cx="1626" cy="1318" r="32" /><circle class="rm-dot__core" cx="1626" cy="1318" r="9" /></g>
+            <g class="rm-dot"><circle class="rm-dot__halo" cx="1768" cy="1501" r="32" /><circle class="rm-dot__core" cx="1768" cy="1501" r="9" /></g>
+          </g>
+        </svg>
+
+        <!-- ▼ Card overlays — one per kingdom, positioned at slot anchors ▼ -->
+        <div class="realms-map__cards">
+
+          <!-- Page 1 -->
+          <article class="rm-card" data-page="1" data-slot="bl">
+            <h3>Burning Lands</h3>
+            <p>El Paso, TX</p>
+            <p class="rm-card__sub">est. 1983 · The First Kingdom</p>
+          </article>
+          <article class="rm-card" data-page="1" data-slot="ml">
+            <h3>Emerald Hills</h3>
+            <p>Dallas-Fort Worth, TX</p>
+            <p class="rm-card__sub">est. 1988 · The Second Kingdom</p>
+          </article>
+          <article class="rm-card" data-page="1" data-slot="tl">
+            <h3>Iron Mountains</h3>
+            <p>Denver, CO</p>
+            <p class="rm-card__sub">Kingdom 1992 · the high country</p>
+          </article>
+          <article class="rm-card" data-page="1" data-slot="mr">
+            <h3>Goldenvale</h3>
+            <p>Nashua, NH</p>
+            <p class="rm-card__sub">Kingdom 1995 · New England</p>
+          </article>
+          <article class="rm-card" data-page="1" data-slot="br">
+            <h3>Wetlands</h3>
+            <p>Houston, TX</p>
+            <p class="rm-card__sub">the Gulf coast court</p>
+          </article>
+          <article class="rm-card" data-page="1" data-slot="tr">
+            <h3>Polaris</h3>
+            <p>Minneapolis, MN</p>
+            <p class="rm-card__sub">the northstar realm</p>
+          </article>
+
+          <!-- Page 2 -->
+          <article class="rm-card" data-page="2" data-slot="br">
+            <h3>Celestial</h3>
+            <p>Austin, TX</p>
+            <p class="rm-card__sub">central Texas · hosts Spring War</p>
+          </article>
+          <article class="rm-card" data-page="2" data-slot="mr">
+            <h3>Dragonspine</h3>
+            <p>Las Cruces, NM</p>
+            <p class="rm-card__sub">the high desert</p>
+          </article>
+          <article class="rm-card" data-page="2" data-slot="tr">
+            <h3>Crystal Groves</h3>
+            <p>Hagerstown, MD</p>
+            <p class="rm-card__sub">Kingdom 2007 · the Mid-Atlantic</p>
+          </article>
+          <article class="rm-card" data-page="2" data-slot="bl">
+            <h3>Westmarch</h3>
+            <p>Los Angeles, CA</p>
+            <p class="rm-card__sub">SoCal sun-coast</p>
+          </article>
+          <article class="rm-card" data-page="2" data-slot="ml">
+            <h3>Northern Lights</h3>
+            <p>Seattle, WA</p>
+            <p class="rm-card__sub">Kingdom 2012 · Cascadia &amp; BC</p>
+          </article>
+          <article class="rm-card" data-page="2" data-slot="tl">
+            <h3>Northreach</h3>
+            <p>Anchorage, AK</p>
+            <p class="rm-card__sub">the farthest crown</p>
+          </article>
+
+          <!-- Page 3 -->
+          <article class="rm-card" data-page="3" data-slot="br">
+            <h3>Neverwinter</h3>
+            <p>Central Florida</p>
+            <p class="rm-card__sub">the southern court</p>
+          </article>
+          <article class="rm-card" data-page="3" data-slot="mr">
+            <h3>Rising Winds</h3>
+            <p>Indianapolis, IN</p>
+            <p class="rm-card__sub">the heart of the Midwest</p>
+          </article>
+          <article class="rm-card" data-page="3" data-slot="tl">
+            <h3>Black Spire</h3>
+            <p>Portland, OR</p>
+            <p class="rm-card__sub">the rainforest realm</p>
+          </article>
+          <article class="rm-card" data-page="3" data-slot="bl">
+            <h3>Desert Winds</h3>
+            <p>Phoenix, AZ</p>
+            <p class="rm-card__sub">the Sonoran kingdom</p>
+          </article>
+          <article class="rm-card" data-page="3" data-slot="tr">
+            <h3>Tal Dagore</h3>
+            <p>St. Louis, MO</p>
+            <p class="rm-card__sub">on the Mississippi</p>
+          </article>
+          <article class="rm-card" data-page="3" data-slot="ml">
+            <h3>Rivermoor</h3>
+            <p>Kansas City, MO</p>
+            <p class="rm-card__sub">the broad plains</p>
+          </article>
+
+          <!-- Page 4 -->
+          <article class="rm-card" data-page="4" data-slot="bl">
+            <h3>Golden Plains</h3>
+            <p>Amarillo, TX</p>
+            <p class="rm-card__sub">the Texas panhandle</p>
+          </article>
+          <article class="rm-card" data-page="4" data-slot="tl">
+            <h3>Viridian Outlands</h3>
+            <p>Spokane, WA</p>
+            <p class="rm-card__sub">the inland Northwest</p>
+          </article>
+          <article class="rm-card" data-page="4" data-slot="br">
+            <h3>Winters Edge</h3>
+            <p>Atlanta, GA</p>
+            <p class="rm-card__sub">the southeastern court</p>
+          </article>
+          <article class="rm-card" data-page="4" data-slot="tr">
+            <h3>Nine Blades</h3>
+            <p>Toronto, ON</p>
+            <p class="rm-card__sub">the Canadian crown</p>
+          </article>
+          <article class="rm-card" data-page="4" data-slot="mr">
+            <h3>13 Roads</h3>
+            <p>Springfield, IL</p>
+            <p class="rm-card__sub">the prairie crossroads</p>
+          </article>
+        </div>
+
+        <!-- Page indicator pips -->
+        <div class="realms-map__pager" aria-label="Page indicator">
+          <button type="button" data-page="1" aria-label="Page 1 of 4"></button>
+          <button type="button" data-page="2" aria-label="Page 2 of 4"></button>
+          <button type="button" data-page="3" aria-label="Page 3 of 4"></button>
+          <button type="button" data-page="4" aria-label="Page 4 of 4"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░░ PHOTO BAND — THE MELEE ░░░ -->
+    <section class="band band--melee" aria-labelledby="band-melee-heading">
+      <div class="band__photo">
+        <img src="img/melee.jpg" alt="A wide shot of dozens of Amtgard fighters mid-melee on an open field — foam swords, shields and polearms crossing in every direction." />
+      </div>
+      <div class="band__inner band__inner--center">
+        <div class="band__col band__col--center">
+          <p class="band__eyebrow">Folio IV·V &nbsp;·&nbsp; The melee</p>
+          <h2 class="band__head" id="band-melee-heading">
+            Twelve in the local park.<br />
+            <em>Six hundred</em> at the Spring War.<br />
+            The rules of the field do not change.
+          </h2>
+          <p class="band__copy band__copy--center">
+            What begins on a public lawn behind your library scales,
+            unbroken, to the largest interkingdom war on the calendar.
+            The same eight-minute rules tutorial. The same honor count.
+            The same weapons of foam and faith.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░░ WARS ░░░ -->
+    <section class="wars" id="wars">
+      <div class="wars__inner">
+        <div class="wars__copy">
+          <p class="section__folio">Folio V</p>
+          <h2>The <em>great</em> wars</h2>
+          <p class="wars__lede">
+            Twice a year, Amtgarders pack their tents, their banners,
+            and a half-finished poem and converge on a single field for
+            a week of war, feast, court, tournament and song.
+          </p>
+          <figure class="field-photo field-photo--inline">
+            <div class="field-photo__frame">
+              <img src="img/spar.jpg" alt="A black-clad fighter, his tunic patched with award badges from a dozen wars, drops into a low stance with sword raised, facing two opponents on the open field." />
+            </div>
+            <figcaption>
+              <span>The single list, dawn</span>
+              Single-elimination tournaments run through the morning
+              while the war proper musters at noon. The patches on his
+              tunic are wars he has fought.
+            </figcaption>
+          </figure>
+        </div>
+
+        <ol class="wars__list">
+          <li>
+            <span class="wars__num">I</span>
+            <div>
+              <h3>Gathering of the Kingdoms</h3>
+              <p class="wars__where">Burning Lands · Mayhill, NM · the oldest</p>
+              <p>
+                The first interkingdom event, run continuously since
+                1985 (formerly Gathering of the Clans). A week of
+                company battles, single-class tournaments, court, feast
+                and the famous midnight torch-march.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <span class="wars__num">II</span>
+            <div>
+              <h3>Spring War</h3>
+              <p class="wars__where">Celestial Kingdom · central Texas · April</p>
+              <p>
+                One of the four interkingdom pillars. Hundreds of
+                fighters muster on a Texas field for company battles,
+                a champion's list and a brackets-deep tournament that
+                runs from dawn to torchlight.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <span class="wars__num">III</span>
+            <div>
+              <h3>Rakis</h3>
+              <p class="wars__where">Iron Mountains · Colorado · summer coronation</p>
+              <p>
+                The mountain war. Fighters camp at altitude on the
+                Front Range, throw down for the crown, and pioneer
+                <em>Jugging</em> — Amtgard's wildest team sport — in
+                the late afternoon.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <span class="wars__num">IV</span>
+            <div>
+              <h3>Olympiad</h3>
+              <p class="wars__where">Rotates among Kingdoms · biennial · the championships</p>
+              <p>
+                The travelling tournament. Each cycle, a different
+                Kingdom plays host, and champions of every weapon
+                style — flower, longsword, sword-and-shield, polearm,
+                bow — converge to crown the year's best.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ░░░ PHOTO BAND II — THE SCOUT ░░░ -->
+    <section class="band band--scout" aria-labelledby="band-scout-heading">
+      <div class="band__photo band__photo--right">
+        <img src="img/scout.jpg" alt="An Amtgard scout in red leather mask and dark tunic walks the field carrying a recurve bow nocked with a foam-tipped arrow." />
+      </div>
+      <div class="band__inner band__inner--split">
+        <div class="band__col">
+          <p class="band__eyebrow">Folio V·I &nbsp;·&nbsp; Interlude</p>
+          <h2 class="band__head" id="band-scout-heading">
+            Three hundred paces. <em>One arrow.</em> Hold breath.
+          </h2>
+          <p class="band__copy">
+            Every kit is hand-built. The bow is wood or laminate,
+            thirty-five pounds of draw at most. The arrow is
+            foam-tipped and fletched true. The hood, the hauberk,
+            the quiver — all stitched by the player who wears them,
+            or traded for at the war-camp.
+          </p>
+          <a href="#arms" class="band__cta">
+            <span>See the starter kit</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#sigil-arrow" /></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░░ ARMS / GEAR ░░░ -->
+    <section class="arms" id="arms">
+      <div class="section__title">
+        <p class="section__folio">Folio VI</p>
+        <h2>Take up <em>arms</em></h2>
+        <p class="section__sub">
+          Every blade in Amtgard is built by hand: a fiberglass or
+          kitespar core, wrapped in closed-cell foam, sealed in
+          strapping tape. Most fighters make their own. Here is the
+          starter armoury.
+        </p>
+      </div>
+
+      <div class="arms__grid">
+        <figure class="arms__item">
+          <div class="arms__art">
+            <svg viewBox="0 0 200 280"><use href="#arm-shortsword" /></svg>
+          </div>
+          <figcaption>
+            <h3>Short blade</h3>
+            <p class="arms__spec">up to 36 in. · single-handed · the everyman's sword</p>
+            <p>
+              The first weapon of every newcomer. Quick, forgiving,
+              easy to make from kitespar, foam and a roll of strapping
+              tape.
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure class="arms__item">
+          <div class="arms__art">
+            <svg viewBox="0 0 200 280"><use href="#arm-greatsword" /></svg>
+          </div>
+          <figcaption>
+            <h3>Great weapon</h3>
+            <p class="arms__spec">over 4 ft, up to 6 ft · two-handed · line-breaker</p>
+            <p>
+              Reach, leverage, drama. The two-handed blade is the
+              calling card of the line-breaking warrior.
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure class="arms__item">
+          <div class="arms__art">
+            <svg viewBox="0 0 200 280"><use href="#arm-bow" /></svg>
+          </div>
+          <figcaption>
+            <h3>Bow</h3>
+            <p class="arms__spec">≤ 35 lb. draw at 28 in. · padded arrows · no compounds</p>
+            <p>
+              Foam-tipped, fletched true, and absolutely lethal across
+              an open field. Patience and angles win wars.
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure class="arms__item">
+          <div class="arms__art">
+            <svg viewBox="0 0 200 280"><use href="#arm-shield" /></svg>
+          </div>
+          <figcaption>
+            <h3>Shield</h3>
+            <p class="arms__spec">buckler to tower · five legal classes · padded edge</p>
+            <p>
+              Buckler, small, medium, large, tower — the shield is half
+              art, half armour, and the cornerstone of any line.
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure class="arms__item">
+          <div class="arms__art">
+            <svg viewBox="0 0 200 280"><use href="#arm-spell" /></svg>
+          </div>
+          <figcaption>
+            <h3>Spellball</h3>
+            <p class="arms__spec">soft cloth · colour by school · the magic-user's tool</p>
+            <p>
+              A bright-coloured cloth ball is your lightning bolt, your
+              flame strike, your magic missile. Throw true, throw often.
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure class="arms__item">
+          <div class="arms__art">
+            <svg viewBox="0 0 200 280"><use href="#arm-staff" /></svg>
+          </div>
+          <figcaption>
+            <h3>Quarterstaff</h3>
+            <p class="arms__spec">5 – 6 ft. · two-handed · the monk's friend</p>
+            <p>
+              Long, light, devastating in trained hands. Widely cited
+              as the strongest weapon on the field, and the Monk's
+              weapon of choice.
+            </p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ░░░ ARTS & SCIENCES ░░░ -->
+    <section class="crafts" id="crafts">
+      <div class="section__title section__title--with-feature">
+        <div class="section__title-text">
+          <p class="section__folio">Folio VII</p>
+          <h2>The <em>arts</em> &amp; sciences</h2>
+          <p class="section__sub">
+            Half the game is fought on the field. The other half is made
+            in the workshop, the kitchen, the scriptorium, and the
+            campfire ring after dark — and is judged at every event,
+            with prizes and titles that travel further than the sword.
+          </p>
+        </div>
+        <figure class="field-photo">
+          <div class="field-photo__frame">
+            <img src="img/garb.jpg" alt="An Amtgard player in a hand-painted kimono-style coat carries a foam axe and a purple staff, walking the field as another player in striped harlequin trousers stands behind." />
+          </div>
+          <figcaption>
+            <span>Field portrait, Folio MMXXV</span>
+            Every garment on this field was sewn by the player wearing
+            it, traded for at the war-camp, or willed down through a
+            household that has carried the same colours for twenty years.
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="crafts__grid">
+        <!-- GARB -->
+        <article class="craft-card">
+          <div class="craft-card__head">
+            <span class="craft-card__no">i</span>
+            <div class="craft-card__sigil">
+              <svg viewBox="0 0 64 64"><use href="#craft-garb" /></svg>
+            </div>
+          </div>
+          <h3>Garb &amp; Costuming</h3>
+          <p class="craft-card__tag">Threadborne, head to hem.</p>
+          <p class="craft-card__body">
+            Tunics, kirtles, surcoats, hoods, cloaks, chausses. Most
+            players sew their own — by hand if patient, by machine if
+            not. A persona's whole biography is told in cloth and
+            cut, and the field is a parade of it.
+          </p>
+          <p class="craft-card__tools">
+            Linen · wool · bone needle · the slow hand
+          </p>
+        </article>
+
+        <!-- ARMOR -->
+        <article class="craft-card">
+          <div class="craft-card__head">
+            <span class="craft-card__no">ii</span>
+            <div class="craft-card__sigil">
+              <svg viewBox="0 0 64 64"><use href="#craft-armor" /></svg>
+            </div>
+          </div>
+          <h3>Armoursmithing</h3>
+          <p class="craft-card__tag">Plate, scale, chain, ring.</p>
+          <p class="craft-card__body">
+            Hand-tooled bracers. Riveted maille that rings when you
+            walk. Pauldrons hammered out of cold-rolled steel on a
+            backyard anvil. Many fighters wear armour built by their
+            own grandparent's tools.
+          </p>
+          <p class="craft-card__tools">
+            Steel · brass · ring &amp; rivet · the long evening
+          </p>
+        </article>
+
+        <!-- LEATHERWORK -->
+        <article class="craft-card">
+          <div class="craft-card__head">
+            <span class="craft-card__no">iii</span>
+            <div class="craft-card__sigil">
+              <svg viewBox="0 0 64 64"><use href="#craft-leather" /></svg>
+            </div>
+          </div>
+          <h3>Leatherwork</h3>
+          <p class="craft-card__tag">Hide, awl, beeswax.</p>
+          <p class="craft-card__body">
+            Sword-belts, scabbards, pouches, bracers, masks. Wet-form
+            a vegetable-tanned hide on a Friday night and by Monday
+            you'll have a piece of armour that will outlive the
+            tournament that calls for it.
+          </p>
+          <p class="craft-card__tools">
+            Veg-tan · awl · saddle stitch · the patient palm
+          </p>
+        </article>
+
+        <!-- CALLIGRAPHY & ILLUMINATION -->
+        <article class="craft-card">
+          <div class="craft-card__head">
+            <span class="craft-card__no">iv</span>
+            <div class="craft-card__sigil">
+              <svg viewBox="0 0 64 64"><use href="#craft-quill" /></svg>
+            </div>
+          </div>
+          <h3>Calligraphy &amp; Illumination</h3>
+          <p class="craft-card__tag">Quill, gilt, vellum.</p>
+          <p class="craft-card__body">
+            Every knighting comes with a hand-lettered scroll. Every
+            kingdom keeps a college of scribes who pen the awards in
+            blackletter and lay gold leaf around the initials. The
+            scriptorium is older than the field, and quieter.
+          </p>
+          <p class="craft-card__tools">
+            Iron-gall ink · 23k leaf · pergamenata · the steady wrist
+          </p>
+        </article>
+
+        <!-- COOKERY -->
+        <article class="craft-card">
+          <div class="craft-card__head">
+            <span class="craft-card__no">v</span>
+            <div class="craft-card__sigil">
+              <svg viewBox="0 0 64 64"><use href="#craft-cookery" /></svg>
+            </div>
+          </div>
+          <h3>Feast &amp; Cookery</h3>
+          <p class="craft-card__tag">Pot, fire, hospitality.</p>
+          <p class="craft-card__body">
+            Open-fire roasts. Honey-glazed root vegetables in cast
+            iron. Bread baked in a tin oven beside the war-camp.
+            Period menus drawn from <em>Le Viandier</em> and the
+            <em>Forme of Cury</em>, served at long trestles after
+            sundown.
+          </p>
+          <p class="craft-card__tools">
+            Cast iron · open coals · honey, mead, beef · the slow heat
+          </p>
+        </article>
+
+        <!-- BARDIC -->
+        <article class="craft-card">
+          <div class="craft-card__head">
+            <span class="craft-card__no">vi</span>
+            <div class="craft-card__sigil">
+              <svg viewBox="0 0 64 64"><use href="#craft-bardic" /></svg>
+            </div>
+          </div>
+          <h3>Bardic Arts</h3>
+          <p class="craft-card__tag">Voice, lute, fire-lit hour.</p>
+          <p class="craft-card__body">
+            Songs of the day's battles, written that afternoon and
+            sung that night. Original poetry. Sagas in Old-English
+            metre. A juggler at the back of the circle, a storyteller
+            at the front. Bardic competitions are judged with as much
+            seriousness as the sword tournaments.
+          </p>
+          <p class="craft-card__tools">
+            Lute · drum · ink · the long memory
+          </p>
+        </article>
+      </div>
+
+      <p class="crafts__footnote">
+        — and many more besides: heraldry &amp; banner-painting,
+        woodworking &amp; bowyering, fletching, brewing &amp; vintnery,
+        embroidery, jewelry-smithing, dance, glasswork. Every kingdom
+        keeps its own roll of <em>Masters</em> in each art.
+      </p>
+    </section>
+
+    <!-- ░░░ JOIN / FIND PARK ░░░ -->
+    <section class="join" id="join">
+      <div class="join__card">
+        <div class="join__corner join__corner--tl" aria-hidden="true">
+          <svg viewBox="0 0 80 80"><use href="#corner-flourish-sm" /></svg>
+        </div>
+        <div class="join__corner join__corner--tr" aria-hidden="true">
+          <svg viewBox="0 0 80 80"><use href="#corner-flourish-sm" /></svg>
+        </div>
+        <div class="join__corner join__corner--bl" aria-hidden="true">
+          <svg viewBox="0 0 80 80"><use href="#corner-flourish-sm" /></svg>
+        </div>
+        <div class="join__corner join__corner--br" aria-hidden="true">
+          <svg viewBox="0 0 80 80"><use href="#corner-flourish-sm" /></svg>
+        </div>
+
+        <p class="section__folio">Folio VIII · the call</p>
+        <h2>
+          There is a park near you. <br />
+          <em>Walk to it.</em>
+        </h2>
+
+        <p class="join__copy">
+          Amtgard chapters meet every Saturday or Sunday on public ground
+          across the United States, Canada, and as far afield as Germany,
+          Croatia, Korea and Finland. Most have a loaner sword waiting
+          for you. Most will teach you to use it before the first hour
+          is out. None will ask you to pay a copper to fight.
+        </p>
+
+        <form class="join__form" onsubmit="event.preventDefault(); window.location.href='https://amtgard.com';">
+          <label for="zip">Find the park nearest thee</label>
+          <div class="join__input">
+            <span aria-hidden="true">⚜</span>
+            <input
+              id="zip"
+              type="text"
+              inputmode="numeric"
+              placeholder="Postal code or city"
+              autocomplete="postal-code"
+            />
+            <button type="submit">
+              <span>Show parks</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#sigil-arrow" /></svg>
+            </button>
+          </div>
+          <p class="join__small">
+            Or read <a href="#">The Newcomer's Primer</a> ·
+            <a href="#">Watch a beginner's match</a> ·
+            <a href="#">Start your own chapter</a>
+          </p>
+        </form>
+
+        <ul class="join__bullets">
+          <li><b>Free.</b> No dues. No buy-in. Forever.</li>
+          <li><b>Loaner gear.</b> Show up empty-handed. Leave armed.</li>
+          <li><b>Eight-minute rules.</b> The whole game, taught at the field.</li>
+          <li><b>All ages.</b> Children play. Grandparents play. Knights are ageless.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ░░░ FOOTER ░░░ -->
+    <footer class="foot">
+      <div class="foot__crest" aria-hidden="true">
+        <svg viewBox="0 0 200 240"><use href="#crest-grand" /></svg>
+      </div>
+
+      <div class="foot__cols">
+        <div>
+          <h4>The Game</h4>
+          <a href="#chronicle">What is Amtgard</a>
+          <a href="#classes">Classes &amp; rules</a>
+          <a href="#arms">Build your kit</a>
+          <a href="#">The Rules of Play</a>
+        </div>
+        <div>
+          <h4>The Realms</h4>
+          <a href="#realms">All Kingdoms</a>
+          <a href="#join">Find a park</a>
+          <a href="#">Start a chapter</a>
+          <a href="#">Online Record Keeper</a>
+        </div>
+        <div>
+          <h4>About the Order</h4>
+          <a href="mission.html">Our Mission</a>
+          <a href="board.html">Board of Directors</a>
+          <a href="volunteers.html">Volunteer Leaders</a>
+          <a href="learn.html">Learn the basics</a>
+        </div>
+        <div>
+          <h4>Beyond the Field</h4>
+          <a href="#">Code of conduct</a>
+          <a href="#">Volunteer</a>
+          <a href="#">Donate</a>
+          <a href="#">Contact the heralds</a>
+        </div>
+      </div>
+
+      <div class="foot__rule"></div>
+
+      <p class="foot__sign">
+        <span>By honor and by foam,</span>
+        <em>The Heralds of Amtgard</em>
+        <span>· est. anno domini MCMLXXXIII ·</span>
+      </p>
+    </footer>
+
+    <!-- ░░░ SVG SPRITE ░░░ -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <defs>
+        <!-- Crossed-swords sigil -->
+        <symbol id="sigil-cross-swords" viewBox="0 0 32 32">
+          <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+            <path d="M5 5 L20 20 M22 22 L27 27" />
+            <path d="M27 5 L12 20 M10 22 L5 27" />
+            <circle cx="16" cy="16" r="2" fill="currentColor" stroke="none" />
+            <path d="M3.5 5 L6.5 5 M3.5 5 L5 3.5 M3.5 5 L5 6.5" />
+            <path d="M28.5 5 L25.5 5 M28.5 5 L27 3.5 M28.5 5 L27 6.5" />
+          </g>
+        </symbol>
+
+        <!-- Arrow -->
+        <symbol id="sigil-arrow" viewBox="0 0 24 24">
+          <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 12 H19" />
+            <path d="M14 7 L19 12 L14 17" />
+          </g>
+        </symbol>
+
+        <!-- Wax seal -->
+        <symbol id="sigil-seal" viewBox="0 0 100 100">
+          <g>
+            <circle cx="50" cy="50" r="42" fill="#4A1410" />
+            <circle cx="50" cy="50" r="42" fill="none" stroke="#2A0A08" stroke-width="2" stroke-dasharray="3 3" />
+            <circle cx="50" cy="50" r="34" fill="none" stroke="#C9A961" stroke-width="0.8" />
+            <text x="50" y="42" text-anchor="middle" font-family="UnifrakturMaguntia" font-size="14" fill="#E8D9B0">A</text>
+            <path d="M30 56 L70 56" stroke="#C9A961" stroke-width="0.8" />
+            <text x="50" y="70" text-anchor="middle" font-family="IM Fell English SC" font-size="7" fill="#E8D9B0" letter-spacing="2">HONOR</text>
+            <!-- crossed swords mini -->
+            <path d="M38 30 L44 36 M56 30 L50 36" stroke="#C9A961" stroke-width="1" stroke-linecap="round" fill="none" />
+          </g>
+        </symbol>
+
+        <!-- Corner flourish -->
+        <symbol id="corner-flourish" viewBox="0 0 120 120">
+          <g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round">
+            <path d="M0 1 L80 1" />
+            <path d="M1 0 L1 80" />
+            <path d="M14 14 Q14 50 50 50" />
+            <path d="M14 14 Q40 14 50 26 Q60 38 60 60" />
+            <circle cx="14" cy="14" r="2" fill="currentColor" />
+            <circle cx="50" cy="50" r="1.5" fill="currentColor" />
+            <path d="M22 8 L26 12 M30 8 L34 12 M38 8 L42 12" />
+            <path d="M8 22 L12 26 M8 30 L12 34 M8 38 L12 42" />
+            <path d="M58 60 Q56 70 50 72 M60 58 Q70 56 72 50" stroke-dasharray="2 3" />
+          </g>
+        </symbol>
+
+        <symbol id="corner-flourish-sm" viewBox="0 0 80 80">
+          <g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round">
+            <path d="M0 1 L50 1" />
+            <path d="M1 0 L1 50" />
+            <path d="M10 10 Q10 35 35 35" />
+            <circle cx="10" cy="10" r="1.6" fill="currentColor" />
+            <path d="M16 6 L19 9 M22 6 L25 9" />
+            <path d="M6 16 L9 19 M6 22 L9 25" />
+          </g>
+        </symbol>
+
+        <!-- Class sigils: simple, distinctive line marks -->
+        <symbol id="class-warrior" viewBox="0 0 64 64">
+          <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <!-- shield -->
+            <path d="M32 8 L52 14 L52 30 Q52 48 32 56 Q12 48 12 30 L12 14 Z" />
+            <!-- sword across -->
+            <path d="M32 16 L32 44" />
+            <path d="M24 24 L40 24" />
+            <path d="M30 44 L34 44" />
+            <circle cx="32" cy="14" r="1.4" fill="currentColor" />
+          </g>
+        </symbol>
+
+        <symbol id="class-wizard" viewBox="0 0 64 64">
+          <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <!-- pointed hat -->
+            <path d="M16 40 L32 8 L48 40 Z" />
+            <path d="M14 40 L50 40" />
+            <!-- stars -->
+            <path d="M40 22 l1 -3 l1 3 l3 1 l-3 1 l-1 3 l-1 -3 l-3 -1 z" fill="currentColor" stroke="none" />
+            <path d="M26 30 l0.7 -2 l0.7 2 l2 0.7 l-2 0.7 l-0.7 2 l-0.7 -2 l-2 -0.7 z" fill="currentColor" stroke="none" />
+            <!-- staff bottom -->
+            <path d="M32 40 L32 56" />
+            <circle cx="32" cy="58" r="2" fill="currentColor" />
+          </g>
+        </symbol>
+
+        <symbol id="class-healer" viewBox="0 0 64 64">
+          <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <!-- chalice -->
+            <path d="M20 14 L44 14 Q44 32 32 36 Q20 32 20 14 Z" />
+            <path d="M32 36 L32 50" />
+            <path d="M22 50 L42 50" />
+            <!-- cross -->
+            <path d="M32 18 L32 30 M26 24 L38 24" />
+            <!-- light rays -->
+            <path d="M14 8 L18 12 M50 8 L46 12 M32 4 L32 8" stroke-dasharray="1 2" />
+          </g>
+        </symbol>
+
+        <symbol id="class-scout" viewBox="0 0 64 64">
+          <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <!-- bow -->
+            <path d="M16 12 Q42 32 16 52" />
+            <path d="M16 12 L13 9 M16 52 L13 55" />
+            <!-- string -->
+            <path d="M16 12 L16 52" stroke-dasharray="2 2" />
+            <!-- arrow -->
+            <path d="M22 32 L52 32" />
+            <path d="M44 27 L52 32 L44 37" />
+            <path d="M22 28 L22 36" />
+          </g>
+        </symbol>
+
+        <symbol id="class-monk" viewBox="0 0 64 64">
+          <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <!-- fist + staff -->
+            <circle cx="32" cy="32" r="14" />
+            <circle cx="32" cy="32" r="22" stroke-dasharray="2 4" />
+            <path d="M32 14 L32 50" />
+            <path d="M28 14 L36 14 M28 50 L36 50" />
+            <!-- knot -->
+            <circle cx="32" cy="32" r="3" fill="currentColor" stroke="none" />
+          </g>
+        </symbol>
+
+        <symbol id="class-druid" viewBox="0 0 64 64">
+          <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <!-- tree -->
+            <path d="M32 10 Q14 24 22 38 Q14 44 24 48 Q24 56 32 56 Q40 56 40 48 Q50 44 42 38 Q50 24 32 10 Z" />
+            <path d="M32 36 L32 56" />
+            <path d="M28 42 L32 46 L36 42" />
+            <path d="M30 50 L32 52 L34 50" />
+          </g>
+        </symbol>
+
+        <symbol id="class-paladin" viewBox="0 0 64 64">
+          <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <!-- sun + sword -->
+            <circle cx="32" cy="20" r="6" />
+            <path d="M32 6 L32 10 M32 30 L32 34 M18 20 L22 20 M42 20 L46 20 M22 10 L25 13 M39 30 L42 33 M22 30 L25 27 M39 10 L42 7" />
+            <!-- sword -->
+            <path d="M32 34 L32 56" />
+            <path d="M24 38 L40 38" />
+            <path d="M30 56 L34 56" />
+          </g>
+        </symbol>
+
+        <symbol id="class-anti" viewBox="0 0 64 64">
+          <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <!-- skull crown -->
+            <path d="M20 18 L24 12 L28 18 L32 10 L36 18 L40 12 L44 18 L44 26 Q44 36 32 38 Q20 36 20 26 Z" />
+            <circle cx="27" cy="26" r="2" fill="currentColor" stroke="none" />
+            <circle cx="37" cy="26" r="2" fill="currentColor" stroke="none" />
+            <path d="M28 32 L36 32" />
+            <!-- inverted sword -->
+            <path d="M32 38 L32 56" />
+            <path d="M24 50 L40 50" />
+          </g>
+        </symbol>
+
+        <symbol id="class-bard" viewBox="0 0 64 64">
+          <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <!-- lute -->
+            <ellipse cx="24" cy="40" rx="12" ry="14" />
+            <path d="M30 32 L48 14" />
+            <path d="M44 10 L52 18" />
+            <circle cx="24" cy="40" r="3" />
+            <path d="M18 36 L18 46 M22 34 L22 48 M26 34 L26 48 M30 36 L30 46" stroke-dasharray="1 1" />
+          </g>
+        </symbol>
+
+        <symbol id="class-archer" viewBox="0 0 64 64">
+          <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <!-- bow drawn vertical -->
+            <path d="M14 8 Q34 32 14 56" />
+            <path d="M14 8 L11 5 M14 56 L11 59" />
+            <!-- string drawn back -->
+            <path d="M14 8 L36 32 L14 56" />
+            <!-- arrow nocked -->
+            <path d="M36 32 L60 32" />
+            <path d="M52 27 L60 32 L52 37" />
+            <path d="M36 28 L36 36" />
+            <!-- fletching -->
+            <path d="M40 28 L40 36" />
+            <path d="M44 30 L44 34" />
+            <!-- quiver hint at side -->
+            <path d="M50 8 L54 14 L52 22" />
+          </g>
+        </symbol>
+
+        <symbol id="class-assassin" viewBox="0 0 64 64">
+          <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <!-- hood/cowl silhouette -->
+            <path d="M20 14 Q24 8 32 8 Q40 8 44 14 Q46 22 42 30 Q38 32 32 32 Q26 32 22 30 Q18 22 20 14 Z" />
+            <!-- shadow over face / eye slits -->
+            <path d="M26 22 L30 22" stroke-width="2.5" />
+            <path d="M34 22 L38 22" stroke-width="2.5" />
+            <!-- cloak edge -->
+            <path d="M16 30 Q14 38 18 46 Q24 50 32 50 Q40 50 46 46 Q50 38 48 30" />
+            <!-- crossed daggers below -->
+            <path d="M22 50 L36 60" />
+            <path d="M42 50 L28 60" />
+            <path d="M22 50 L19 47 M42 50 L45 47" />
+            <path d="M21 49 L23 51 M41 49 L43 51" />
+          </g>
+        </symbol>
+
+        <symbol id="class-barbarian" viewBox="0 0 64 64">
+          <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <!-- horned helm -->
+            <path d="M22 26 Q22 18 32 18 Q42 18 42 26 L42 34 L22 34 Z" />
+            <!-- horns -->
+            <path d="M22 26 Q14 22 12 12" />
+            <path d="M42 26 Q50 22 52 12" />
+            <path d="M11 12 L13 9 M51 12 L53 9" />
+            <!-- great-axe haft -->
+            <path d="M32 38 L32 58" />
+            <!-- axe head -->
+            <path d="M22 42 Q14 44 12 50 Q14 50 22 50 Q26 50 32 46" />
+            <path d="M42 42 Q50 44 52 50 Q50 50 42 50 Q38 50 32 46" />
+            <!-- pommel -->
+            <circle cx="32" cy="60" r="2" />
+            <!-- war-paint stripes -->
+            <path d="M28 28 L28 32 M32 28 L32 32 M36 28 L36 32" />
+          </g>
+        </symbol>
+
+        <!-- Weapons -->
+        <symbol id="arm-shortsword" viewBox="0 0 200 280">
+          <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <!-- blade -->
+            <path d="M100 30 L94 200 L100 210 L106 200 Z" />
+            <path d="M100 30 L100 200" stroke-width="0.6" />
+            <!-- guard -->
+            <path d="M70 200 L130 200" stroke-width="3" />
+            <path d="M68 198 L68 204 M132 198 L132 204" />
+            <!-- grip -->
+            <path d="M96 204 L96 244 L104 244 L104 204" />
+            <path d="M96 210 L104 210 M96 218 L104 218 M96 226 L104 226 M96 234 L104 234" />
+            <!-- pommel -->
+            <circle cx="100" cy="252" r="7" />
+          </g>
+        </symbol>
+
+        <symbol id="arm-greatsword" viewBox="0 0 200 280">
+          <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M100 12 L92 210 L100 220 L108 210 Z" />
+            <path d="M100 12 L100 210" stroke-width="0.6" />
+            <path d="M58 210 L142 210" stroke-width="3" />
+            <path d="M56 206 L56 214 M144 206 L144 214" />
+            <path d="M58 210 Q70 200 100 200 Q130 200 142 210" />
+            <path d="M96 214 L96 256 L104 256 L104 214" />
+            <path d="M96 222 L104 222 M96 232 L104 232 M96 242 L104 242" />
+            <path d="M92 256 L108 256 L104 268 L96 268 Z" />
+          </g>
+        </symbol>
+
+        <symbol id="arm-bow" viewBox="0 0 200 280">
+          <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M70 20 Q150 140 70 260" />
+            <path d="M70 20 L60 14 M70 260 L60 266" />
+            <path d="M70 20 L70 260" stroke-dasharray="3 4" />
+            <!-- arrow nocked -->
+            <path d="M75 140 L180 140" />
+            <path d="M170 134 L180 140 L170 146" />
+            <path d="M75 134 L75 146" />
+            <path d="M82 134 L82 146" />
+            <path d="M89 134 L89 146" />
+          </g>
+        </symbol>
+
+        <symbol id="arm-shield" viewBox="0 0 200 280">
+          <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <!-- heater shield -->
+            <path d="M40 30 L160 30 L160 130 Q160 220 100 260 Q40 220 40 130 Z" />
+            <!-- division -->
+            <path d="M100 30 L100 260" stroke-width="0.8" />
+            <path d="M40 130 L160 130" stroke-width="0.8" />
+            <!-- ornament -->
+            <path d="M70 70 L130 70" stroke-dasharray="2 3" />
+            <circle cx="100" cy="100" r="14" />
+            <path d="M100 90 L100 110 M90 100 L110 100" />
+            <path d="M80 180 Q100 200 120 180" />
+          </g>
+        </symbol>
+
+        <symbol id="arm-spell" viewBox="0 0 200 280">
+          <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <!-- ball with motion arcs -->
+            <circle cx="100" cy="160" r="32" />
+            <circle cx="100" cy="160" r="32" stroke-dasharray="1 4" />
+            <path d="M100 160 L100 130" />
+            <path d="M88 138 L112 138" />
+            <!-- trailing fire arcs -->
+            <path d="M40 80 Q70 100 70 130" stroke-dasharray="3 3" />
+            <path d="M30 100 Q60 120 60 140" stroke-dasharray="3 3" />
+            <path d="M50 60 Q80 80 80 110" stroke-dasharray="3 3" />
+            <!-- spark -->
+            <path d="M150 100 l4 -10 l4 10 l10 4 l-10 4 l-4 10 l-4 -10 l-10 -4 z" fill="currentColor" stroke="none" />
+          </g>
+        </symbol>
+
+        <symbol id="arm-staff" viewBox="0 0 200 280">
+          <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <!-- long staff -->
+            <path d="M100 12 L100 260" />
+            <path d="M94 12 L106 12" />
+            <path d="M94 260 L106 260" />
+            <!-- bands -->
+            <path d="M90 60 L110 60" />
+            <path d="M90 130 L110 130" />
+            <path d="M90 200 L110 200" />
+            <!-- top knob -->
+            <circle cx="100" cy="20" r="6" />
+            <circle cx="100" cy="252" r="6" />
+          </g>
+        </symbol>
+
+        <!-- Craft sigils (Arts & Sciences) -->
+        <symbol id="craft-garb" viewBox="0 0 64 64">
+          <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <!-- draped fabric -->
+            <path d="M12 22 Q22 18 32 22 Q42 26 52 22 L52 44 Q42 48 32 44 Q22 40 12 44 Z" />
+            <path d="M12 33 Q22 29 32 33 Q42 37 52 33" stroke-dasharray="2 2" />
+            <!-- needle -->
+            <path d="M16 8 L30 26" stroke-width="2" />
+            <circle cx="15" cy="7" r="1.6" fill="currentColor" stroke="none" />
+            <path d="M14 6 L17 8" />
+            <!-- thread trailing -->
+            <path d="M30 26 Q34 28 38 27" stroke-dasharray="1.5 2" />
+            <!-- stitches across the fabric -->
+            <path d="M22 38 L24 40 M28 40 L30 42 M34 40 L36 42 M40 38 L42 40" />
+          </g>
+        </symbol>
+
+        <symbol id="craft-armor" viewBox="0 0 64 64">
+          <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <!-- great helm -->
+            <path d="M16 24 Q16 18 22 16 L42 16 Q48 18 48 24 L48 44 Q44 50 32 52 Q20 50 16 44 Z" />
+            <!-- visor slit -->
+            <path d="M22 30 L42 30" stroke-width="2.5" />
+            <!-- breath holes -->
+            <circle cx="26" cy="38" r="1.2" fill="currentColor" stroke="none" />
+            <circle cx="32" cy="38" r="1.2" fill="currentColor" stroke="none" />
+            <circle cx="38" cy="38" r="1.2" fill="currentColor" stroke="none" />
+            <!-- crest plume -->
+            <path d="M30 16 Q30 10 32 6 Q34 10 34 16" />
+            <!-- rivets -->
+            <circle cx="20" cy="22" r="1" fill="currentColor" stroke="none" />
+            <circle cx="44" cy="22" r="1" fill="currentColor" stroke="none" />
+            <circle cx="20" cy="44" r="1" fill="currentColor" stroke="none" />
+            <circle cx="44" cy="44" r="1" fill="currentColor" stroke="none" />
+          </g>
+        </symbol>
+
+        <symbol id="craft-leather" viewBox="0 0 64 64">
+          <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <!-- belt -->
+            <path d="M8 28 L56 28 L56 38 L8 38 Z" />
+            <!-- buckle -->
+            <rect x="10" y="26" width="14" height="14" />
+            <path d="M10 33 L24 33" />
+            <path d="M14 30 L14 36" />
+            <!-- punched holes -->
+            <circle cx="36" cy="33" r="1.5" />
+            <circle cx="42" cy="33" r="1.5" />
+            <circle cx="48" cy="33" r="1.5" />
+            <!-- awl piercing from above -->
+            <path d="M36 14 L36 28" stroke-width="2" />
+            <path d="M34 12 L38 12 L36 8 Z" fill="currentColor" stroke="none" />
+            <!-- stitching -->
+            <path d="M30 30 L32 30 M32 36 L34 36 M50 30 L52 30 M50 36 L52 36" />
+          </g>
+        </symbol>
+
+        <symbol id="craft-quill" viewBox="0 0 64 64">
+          <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <!-- scroll -->
+            <path d="M12 16 Q12 12 16 12 L48 12 Q52 12 52 16 L52 50 Q52 54 48 54 L16 54 Q12 54 12 50 Z" />
+            <!-- ribbon ends -->
+            <path d="M16 12 Q16 18 12 18 M16 50 Q16 56 12 56" />
+            <path d="M48 12 Q48 18 52 18 M48 50 Q48 56 52 56" />
+            <!-- text lines -->
+            <path d="M22 24 L44 24" />
+            <path d="M22 30 L46 30" />
+            <path d="M22 36 L42 36" />
+            <!-- ornamental initial block -->
+            <rect x="22" y="40" width="6" height="6" />
+            <path d="M24 42 L26 44" />
+            <!-- quill -->
+            <path d="M50 8 L42 22 L36 30" stroke-width="1.6" />
+            <path d="M50 8 L52 4 M50 8 L46 6 M48 12 L44 14 M44 18 L40 20" />
+          </g>
+        </symbol>
+
+        <symbol id="craft-cookery" viewBox="0 0 64 64">
+          <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <!-- cauldron -->
+            <path d="M12 26 L52 26 L48 50 Q46 54 42 54 L22 54 Q18 54 16 50 Z" />
+            <path d="M14 26 L50 26" stroke-width="2.5" />
+            <!-- handle ears -->
+            <path d="M12 26 Q8 26 8 22 Q8 19 11 19" />
+            <path d="M52 26 Q56 26 56 22 Q56 19 53 19" />
+            <!-- decorative band -->
+            <path d="M22 36 L42 36" stroke-dasharray="2 2" />
+            <!-- steam curls -->
+            <path d="M22 20 Q26 16 22 12 Q18 8 22 4" />
+            <path d="M32 20 Q36 16 32 12 Q28 8 32 4" />
+            <path d="M42 20 Q46 16 42 12 Q38 8 42 4" />
+          </g>
+        </symbol>
+
+        <symbol id="craft-bardic" viewBox="0 0 64 64">
+          <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <!-- lyre body -->
+            <path d="M20 50 L44 50 L46 38 L18 38 Z" />
+            <!-- arms -->
+            <path d="M20 38 Q14 30 16 18" />
+            <path d="M44 38 Q50 30 48 18" />
+            <!-- crossbar -->
+            <path d="M14 16 L50 16" stroke-width="1.8" />
+            <!-- finials -->
+            <circle cx="14" cy="16" r="1.6" fill="currentColor" stroke="none" />
+            <circle cx="50" cy="16" r="1.6" fill="currentColor" stroke="none" />
+            <!-- strings -->
+            <path d="M22 16 L24 38" />
+            <path d="M28 16 L29 38" />
+            <path d="M34 16 L34 38" />
+            <path d="M40 16 L39 38" />
+            <path d="M46 16 L44 38" />
+            <!-- sound hole -->
+            <circle cx="32" cy="44" r="2" />
+          </g>
+        </symbol>
+
+        <!-- Grand crest for footer -->
+        <symbol id="crest-grand" viewBox="0 0 200 240">
+          <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <!-- shield outline -->
+            <path d="M30 30 L170 30 L170 130 Q170 200 100 230 Q30 200 30 130 Z" />
+            <!-- inner border -->
+            <path d="M40 40 L160 40 L160 130 Q160 192 100 218 Q40 192 40 130 Z" stroke-dasharray="2 3" />
+            <!-- ribbon banner -->
+            <path d="M20 70 L60 80 L60 100 L20 90 Z" />
+            <path d="M180 70 L140 80 L140 100 L180 90 Z" />
+            <!-- crossed swords -->
+            <path d="M70 70 L130 160" />
+            <path d="M130 70 L70 160" />
+            <path d="M65 65 L75 65 L75 75 L65 75 Z" />
+            <path d="M125 65 L135 65 L135 75 L125 75 Z" />
+            <circle cx="100" cy="115" r="3" fill="currentColor" stroke="none" />
+            <!-- crown above -->
+            <path d="M70 24 L80 14 L90 22 L100 10 L110 22 L120 14 L130 24 Z" />
+            <circle cx="80" cy="14" r="2" fill="currentColor" stroke="none" />
+            <circle cx="100" cy="10" r="2" fill="currentColor" stroke="none" />
+            <circle cx="120" cy="14" r="2" fill="currentColor" stroke="none" />
+            <!-- A monogram -->
+            <text x="100" y="190" text-anchor="middle" font-family="UnifrakturMaguntia" font-size="34" fill="currentColor" stroke="none">A</text>
+          </g>
+        </symbol>
+      </defs>
+    </svg>
+
+    <script src="script.js"></script>
+  </body>
+</html>
