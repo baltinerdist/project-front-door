@@ -1577,15 +1577,12 @@ input, textarea, button, a, [data-cursor="true"] { cursor: none; }
   background-size: 159.07% 129.76%;
   background-position: right bottom;
   filter:
-    sepia(0.85)
-    saturate(1.5)
-    hue-rotate(-15deg)
-    brightness(0.55)
-    contrast(1.1);
-  opacity: 0.72;
-  /* radial fade so the edges blend into the section instead of cutting hard */
-  -webkit-mask-image: radial-gradient(ellipse 95% 100% at 50% 50%, #000 75%, transparent 100%);
-          mask-image: radial-gradient(ellipse 95% 100% at 50% 50%, #000 75%, transparent 100%);
+    sepia(0.6)
+    saturate(1.4)
+    hue-rotate(-12deg)
+    brightness(0.75)
+    contrast(1.15);
+  opacity: 0.55;
   pointer-events: none;
   z-index: 0;
 }
