@@ -1560,21 +1560,21 @@ input, textarea, button, a, [data-cursor="true"] { cursor: none; }
   background:
     radial-gradient(ellipse 80% 70% at 50% 50%, color-mix(in srgb, var(--blood-deep) 35%, transparent) 0%, transparent 70%),
     color-mix(in srgb, var(--ink-soft) 80%, transparent);
-  aspect-ratio: 1439 / 1344;
+  aspect-ratio: 1439 / 944;
   isolation: isolate;
   overflow: hidden;
 }
 
 /* Geographic basemap underlay — recolour the grey blank-map to aged-parchment.
    Native SVG is 2289x1744; we crop it via background-size + right-bottom anchoring
-   so the visible region matches the SVG overlay's viewBox of 850 400 1439 1344
-   (drops Hawaii + empty Pacific on the left, trims unused space at the top). */
+   so the visible region matches the SVG overlay's viewBox of 850 800 1439 944
+   (drops Hawaii + empty Pacific on the left and the uninhabited Arctic up top). */
 .realms-map__basemap {
   position: absolute;
   inset: 1rem;
   background-image: url('img/north-america.svg');
   background-repeat: no-repeat;
-  background-size: 159.07% 129.76%;
+  background-size: 159.07% 184.75%;
   background-position: right bottom;
   filter:
     sepia(0.6)
@@ -1632,6 +1632,19 @@ input, textarea, button, a, [data-cursor="true"] { cursor: none; }
   opacity: 0.85;
   fill: none;
   filter: drop-shadow(0 0 4px color-mix(in srgb, var(--ember) 60%, transparent));
+}
+
+/* Off-map indicator: line ends in a glowing arrowhead pointing toward
+   the kingdom's true position outside the cropped frame. */
+.rm-line--off-map {
+  stroke-width: 2.4;
+  opacity: 1;
+}
+.rm-arrow__head {
+  fill: #FFE5A8;
+  filter:
+    drop-shadow(0 0 4px var(--gold-bright))
+    drop-shadow(0 0 10px var(--ember));
 }
 
 /* Glowing dots */

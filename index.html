@@ -742,38 +742,54 @@
         ></div>
         <svg
           class="realms-map__svg"
-          viewBox="850 400 1439 1344"
+          viewBox="850 800 1439 944"
           preserveAspectRatio="xMidYMid meet"
           role="img"
           aria-label="Map showing six Amtgard kingdoms at a time"
         >
 
+          <defs>
+            <!-- Glowing arrowhead used to indicate kingdoms that fall outside
+                 the cropped map (currently just Northreach in Anchorage, AK).
+                 orient is a fixed angle (-130°) so the arrow always points
+                 NNW toward Alaska regardless of the line's geometry — the
+                 line itself has to dangle into open space below the card,
+                 since the card occupies the upper-left corner where AK is. -->
+            <marker id="rm-arrow" viewBox="0 0 12 12" refX="10" refY="6"
+                    markerWidth="32" markerHeight="32" orient="-130"
+                    markerUnits="userSpaceOnUse">
+              <path class="rm-arrow__head" d="M 0 0 L 12 6 L 0 12 L 3 6 Z" />
+            </marker>
+          </defs>
+
           <!--
             Coordinates derived from the actual centroids of US-state and CA-province path
             data in the BlankMap-USA-states-Canada-provinces.svg file (native 2289x1744).
-            ViewBox cropped to 850 400 1439 1344 — drops Hawaii + empty Pacific on the left
-            and trims unused space at the top, while keeping all inhabited kingdoms in frame.
+            ViewBox cropped to 850 800 1439 944 — drops Hawaii + empty Pacific on the left
+            and the uninhabited Arctic up top, framing only the populated lower-48 + southern
+            Canada strip. Northreach (Anchorage, AK) falls outside this frame and is
+            indicated by an off-map arrowhead instead of a dot.
 
             Slot anchors (line endpoints, where the cards live):
-              TL=(1120,480)  TR=(2020,480)
-              ML=(1120,1070) MR=(2020,1070)
-              BL=(1120,1650) BR=(2020,1650)
+              TL=(1120,855)  TR=(2020,855)
+              ML=(1120,1270) MR=(2020,1270)
+              BL=(1120,1675) BR=(2020,1675)
           -->
 
           <!-- ▼ PAGE 1 ▼ The founding 6 -->
           <g class="rm-page" data-page="1">
             <!-- Burning Lands (El Paso, far W. TX) → BL -->
-            <line class="rm-line" x1="1262" y1="1500" x2="1120" y2="1650" />
+            <line class="rm-line" x1="1262" y1="1500" x2="1120" y2="1675" />
             <!-- Iron Mountains (Denver, CO) → TL -->
-            <line class="rm-line" x1="1305" y1="1310" x2="1120" y2="480"  />
+            <line class="rm-line" x1="1305" y1="1310" x2="1120" y2="855"  />
             <!-- Polaris (Minneapolis, MN) → TR -->
-            <line class="rm-line" x1="1556" y1="1140" x2="2020" y2="480"  />
+            <line class="rm-line" x1="1556" y1="1140" x2="2020" y2="855"  />
             <!-- Goldenvale (Nashua, NH) → MR -->
-            <line class="rm-line" x1="1962" y1="1167" x2="2020" y2="1070" />
+            <line class="rm-line" x1="1962" y1="1167" x2="2020" y2="1270" />
             <!-- Emerald Hills (DFW, north central TX) → ML -->
-            <line class="rm-line" x1="1430" y1="1450" x2="1120" y2="1070" />
+            <line class="rm-line" x1="1430" y1="1450" x2="1120" y2="1270" />
             <!-- Wetlands (Houston, SE TX) → BR -->
-            <line class="rm-line" x1="1500" y1="1620" x2="2020" y2="1650" />
+            <line class="rm-line" x1="1500" y1="1620" x2="2020" y2="1675" />
 
             <g class="rm-dot"><circle class="rm-dot__halo" cx="1262" cy="1500" r="32" /><circle class="rm-dot__core" cx="1262" cy="1500" r="9" /></g>
             <g class="rm-dot"><circle class="rm-dot__halo" cx="1305" cy="1310" r="32" /><circle class="rm-dot__core" cx="1305" cy="1310" r="9" /></g>
@@ -785,21 +801,21 @@
 
           <!-- ▼ PAGE 2 ▼ The Pacific & Mid-Atlantic crowns -->
           <g class="rm-page" data-page="2">
-            <!-- Northreach (Anchorage, AK inset) → TL -->
-            <line class="rm-line" x1="891"  y1="514"  x2="1120" y2="480"  />
+            <!-- Northreach (Anchorage, AK) → TL — off-map; arrow points NNW toward AK.
+                 Line dangles down-right into open ocean below the card; arrow has
+                 fixed orient so it always points up-left regardless of line direction. -->
+            <line class="rm-line rm-line--off-map" x1="1120" y1="855" x2="1230" y2="950" marker-end="url(#rm-arrow)" />
             <!-- Northern Lights (Seattle, W. WA) → ML -->
-            <line class="rm-line" x1="1075" y1="1015" x2="1120" y2="1070" />
+            <line class="rm-line" x1="1075" y1="1015" x2="1120" y2="1270" />
             <!-- Westmarch (Los Angeles, S. CA) → BL -->
-            <line class="rm-line" x1="1030" y1="1380" x2="1120" y2="1650" />
-            <!-- Dragonspine (Las Cruces, NM) → BL? — too crowded; route to TL? but Northreach has it -->
+            <line class="rm-line" x1="1030" y1="1380" x2="1120" y2="1675" />
             <!-- Dragonspine (Las Cruces, NM) → MR -->
-            <line class="rm-line" x1="1272" y1="1428" x2="2020" y2="1070" />
+            <line class="rm-line" x1="1272" y1="1428" x2="2020" y2="1270" />
             <!-- Celestial (Austin, central TX) → BR -->
-            <line class="rm-line" x1="1410" y1="1565" x2="2020" y2="1650" />
+            <line class="rm-line" x1="1410" y1="1565" x2="2020" y2="1675" />
             <!-- Crystal Groves (Hagerstown, MD) → TR -->
-            <line class="rm-line" x1="1874" y1="1317" x2="2020" y2="480"  />
+            <line class="rm-line" x1="1874" y1="1317" x2="2020" y2="855"  />
 
-            <g class="rm-dot"><circle class="rm-dot__halo" cx="891"  cy="514"  r="32" /><circle class="rm-dot__core" cx="891"  cy="514"  r="9" /></g>
             <g class="rm-dot"><circle class="rm-dot__halo" cx="1075" cy="1015" r="32" /><circle class="rm-dot__core" cx="1075" cy="1015" r="9" /></g>
             <g class="rm-dot"><circle class="rm-dot__halo" cx="1030" cy="1380" r="32" /><circle class="rm-dot__core" cx="1030" cy="1380" r="9" /></g>
             <g class="rm-dot"><circle class="rm-dot__halo" cx="1272" cy="1428" r="32" /><circle class="rm-dot__core" cx="1272" cy="1428" r="9" /></g>
@@ -810,17 +826,17 @@
           <!-- ▼ PAGE 3 ▼ The Midwest, Southwest & Southeast -->
           <g class="rm-page" data-page="3">
             <!-- Black Spire (Portland, OR) → TL -->
-            <line class="rm-line" x1="1057" y1="1101" x2="1120" y2="480"  />
+            <line class="rm-line" x1="1057" y1="1101" x2="1120" y2="855"  />
             <!-- Rivermoor (Kansas City, W. MO) → ML -->
-            <line class="rm-line" x1="1515" y1="1380" x2="1120" y2="1070" />
+            <line class="rm-line" x1="1515" y1="1380" x2="1120" y2="1270" />
             <!-- Desert Winds (Phoenix, AZ) → BL -->
-            <line class="rm-line" x1="1150" y1="1413" x2="1120" y2="1650" />
+            <line class="rm-line" x1="1150" y1="1413" x2="1120" y2="1675" />
             <!-- Tal Dagore (St. Louis, E. MO) → TR -->
-            <line class="rm-line" x1="1620" y1="1360" x2="2020" y2="480"  />
+            <line class="rm-line" x1="1620" y1="1360" x2="2020" y2="855"  />
             <!-- Rising Winds (Indianapolis, IN) → MR -->
-            <line class="rm-line" x1="1689" y1="1316" x2="2020" y2="1070" />
+            <line class="rm-line" x1="1689" y1="1316" x2="2020" y2="1270" />
             <!-- Neverwinter (central Florida) → BR -->
-            <line class="rm-line" x1="1767" y1="1634" x2="2020" y2="1650" />
+            <line class="rm-line" x1="1767" y1="1634" x2="2020" y2="1675" />
 
             <g class="rm-dot"><circle class="rm-dot__halo" cx="1057" cy="1101" r="32" /><circle class="rm-dot__core" cx="1057" cy="1101" r="9" /></g>
             <g class="rm-dot"><circle class="rm-dot__halo" cx="1515" cy="1380" r="32" /><circle class="rm-dot__core" cx="1515" cy="1380" r="9" /></g>
@@ -833,15 +849,15 @@
           <!-- ▼ PAGE 4 ▼ The five youngest crowns -->
           <g class="rm-page" data-page="4">
             <!-- Viridian Outlands (Spokane, E. WA) → TL -->
-            <line class="rm-line" x1="1140" y1="1030" x2="1120" y2="480"  />
+            <line class="rm-line" x1="1140" y1="1030" x2="1120" y2="855"  />
             <!-- Golden Plains (Amarillo, TX panhandle) → BL -->
-            <line class="rm-line" x1="1340" y1="1395" x2="1120" y2="1650" />
+            <line class="rm-line" x1="1340" y1="1395" x2="1120" y2="1675" />
             <!-- Nine Blades (Toronto, S. ON) → TR -->
-            <line class="rm-line" x1="1700" y1="1180" x2="2020" y2="480"  />
+            <line class="rm-line" x1="1700" y1="1180" x2="2020" y2="855"  />
             <!-- 13 Roads (Springfield, IL) → MR -->
-            <line class="rm-line" x1="1626" y1="1318" x2="2020" y2="1070" />
+            <line class="rm-line" x1="1626" y1="1318" x2="2020" y2="1270" />
             <!-- Winters Edge (Atlanta, GA) → BR -->
-            <line class="rm-line" x1="1768" y1="1501" x2="2020" y2="1650" />
+            <line class="rm-line" x1="1768" y1="1501" x2="2020" y2="1675" />
 
             <g class="rm-dot"><circle class="rm-dot__halo" cx="1140" cy="1030" r="32" /><circle class="rm-dot__core" cx="1140" cy="1030" r="9" /></g>
             <g class="rm-dot"><circle class="rm-dot__halo" cx="1340" cy="1395" r="32" /><circle class="rm-dot__core" cx="1340" cy="1395" r="9" /></g>
