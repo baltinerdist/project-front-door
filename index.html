@@ -751,12 +751,11 @@
           <defs>
             <!-- Glowing arrowhead used to indicate kingdoms that fall outside
                  the cropped map (currently just Northreach in Anchorage, AK).
-                 orient is a fixed angle (-130°) so the arrow always points
-                 NNW toward Alaska regardless of the line's geometry — the
-                 line itself has to dangle into open space below the card,
-                 since the card occupies the upper-left corner where AK is. -->
+                 orient="auto" rotates the arrow along the line direction, so
+                 the line drawn from the ML card up-left into the empty top-
+                 left corner naturally produces an NNW-pointing tip. -->
             <marker id="rm-arrow" viewBox="0 0 12 12" refX="10" refY="6"
-                    markerWidth="32" markerHeight="32" orient="-130"
+                    markerWidth="32" markerHeight="32" orient="auto"
                     markerUnits="userSpaceOnUse">
               <path class="rm-arrow__head" d="M 0 0 L 12 6 L 0 12 L 3 6 Z" />
             </marker>
@@ -799,14 +798,13 @@
             <g class="rm-dot"><circle class="rm-dot__halo" cx="1500" cy="1620" r="32" /><circle class="rm-dot__core" cx="1500" cy="1620" r="9" /></g>
           </g>
 
-          <!-- ▼ PAGE 2 ▼ The Pacific & Mid-Atlantic crowns -->
+          <!-- ▼ PAGE 2 ▼ The Pacific & Mid-Atlantic crowns (5 — TL left empty
+               so Northreach's off-map arrow can stretch into the corner) -->
           <g class="rm-page" data-page="2">
-            <!-- Northreach (Anchorage, AK) → TL — off-map; arrow points NNW toward AK.
-                 Line dangles down-right into open ocean below the card; arrow has
-                 fixed orient so it always points up-left regardless of line direction. -->
-            <line class="rm-line rm-line--off-map" x1="1120" y1="855" x2="1230" y2="950" marker-end="url(#rm-arrow)" />
-            <!-- Northern Lights (Seattle, W. WA) → ML -->
-            <line class="rm-line" x1="1075" y1="1015" x2="1120" y2="1270" />
+            <!-- Northreach (Anchorage, AK) → ML — off-map. Line runs from the
+                 ML card slot up into the empty top-left corner; auto-oriented
+                 marker tip points NNW toward Alaska. -->
+            <line class="rm-line rm-line--off-map" x1="1120" y1="1270" x2="880" y2="825" marker-end="url(#rm-arrow)" />
             <!-- Westmarch (Los Angeles, S. CA) → BL -->
             <line class="rm-line" x1="1030" y1="1380" x2="1120" y2="1675" />
             <!-- Dragonspine (Las Cruces, NM) → MR -->
@@ -816,7 +814,6 @@
             <!-- Crystal Groves (Hagerstown, MD) → TR -->
             <line class="rm-line" x1="1874" y1="1317" x2="2020" y2="855"  />
 
-            <g class="rm-dot"><circle class="rm-dot__halo" cx="1075" cy="1015" r="32" /><circle class="rm-dot__core" cx="1075" cy="1015" r="9" /></g>
             <g class="rm-dot"><circle class="rm-dot__halo" cx="1030" cy="1380" r="32" /><circle class="rm-dot__core" cx="1030" cy="1380" r="9" /></g>
             <g class="rm-dot"><circle class="rm-dot__halo" cx="1272" cy="1428" r="32" /><circle class="rm-dot__core" cx="1272" cy="1428" r="9" /></g>
             <g class="rm-dot"><circle class="rm-dot__halo" cx="1410" cy="1565" r="32" /><circle class="rm-dot__core" cx="1410" cy="1565" r="9" /></g>
@@ -846,10 +843,12 @@
             <g class="rm-dot"><circle class="rm-dot__halo" cx="1767" cy="1634" r="32" /><circle class="rm-dot__core" cx="1767" cy="1634" r="9" /></g>
           </g>
 
-          <!-- ▼ PAGE 4 ▼ The five youngest crowns -->
+          <!-- ▼ PAGE 4 ▼ The youngest crowns + Northern Lights -->
           <g class="rm-page" data-page="4">
             <!-- Viridian Outlands (Spokane, E. WA) → TL -->
             <line class="rm-line" x1="1140" y1="1030" x2="1120" y2="855"  />
+            <!-- Northern Lights (Seattle, W. WA) → ML -->
+            <line class="rm-line" x1="1075" y1="1015" x2="1120" y2="1270" />
             <!-- Golden Plains (Amarillo, TX panhandle) → BL -->
             <line class="rm-line" x1="1340" y1="1395" x2="1120" y2="1675" />
             <!-- Nine Blades (Toronto, S. ON) → TR -->
@@ -860,6 +859,7 @@
             <line class="rm-line" x1="1768" y1="1501" x2="2020" y2="1675" />
 
             <g class="rm-dot"><circle class="rm-dot__halo" cx="1140" cy="1030" r="32" /><circle class="rm-dot__core" cx="1140" cy="1030" r="9" /></g>
+            <g class="rm-dot"><circle class="rm-dot__halo" cx="1075" cy="1015" r="32" /><circle class="rm-dot__core" cx="1075" cy="1015" r="9" /></g>
             <g class="rm-dot"><circle class="rm-dot__halo" cx="1340" cy="1395" r="32" /><circle class="rm-dot__core" cx="1340" cy="1395" r="9" /></g>
             <g class="rm-dot"><circle class="rm-dot__halo" cx="1700" cy="1180" r="32" /><circle class="rm-dot__core" cx="1700" cy="1180" r="9" /></g>
             <g class="rm-dot"><circle class="rm-dot__halo" cx="1626" cy="1318" r="32" /><circle class="rm-dot__core" cx="1626" cy="1318" r="9" /></g>
@@ -924,11 +924,6 @@
             <p class="rm-card__sub">SoCal sun-coast</p>
           </article>
           <article class="rm-card" data-page="2" data-slot="ml">
-            <h3>Northern Lights</h3>
-            <p>Seattle, WA</p>
-            <p class="rm-card__sub">Kingdom 2012 · Cascadia &amp; BC</p>
-          </article>
-          <article class="rm-card" data-page="2" data-slot="tl">
             <h3>Northreach</h3>
             <p>Anchorage, AK</p>
             <p class="rm-card__sub">the farthest crown</p>
@@ -991,6 +986,11 @@
             <h3>13 Roads</h3>
             <p>Springfield, IL</p>
             <p class="rm-card__sub">the prairie crossroads</p>
+          </article>
+          <article class="rm-card" data-page="4" data-slot="ml">
+            <h3>Northern Lights</h3>
+            <p>Seattle, WA</p>
+            <p class="rm-card__sub">Kingdom 2012 · Cascadia &amp; BC</p>
           </article>
         </div>
 
