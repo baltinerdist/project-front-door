@@ -1560,29 +1560,32 @@ input, textarea, button, a, [data-cursor="true"] { cursor: none; }
   background:
     radial-gradient(ellipse 80% 70% at 50% 50%, color-mix(in srgb, var(--blood-deep) 35%, transparent) 0%, transparent 70%),
     color-mix(in srgb, var(--ink-soft) 80%, transparent);
-  aspect-ratio: 2289 / 1744;
+  aspect-ratio: 1439 / 1344;
   isolation: isolate;
   overflow: hidden;
 }
 
-/* Geographic basemap underlay — recolour the grey blank-map to aged-parchment */
+/* Geographic basemap underlay — recolour the grey blank-map to aged-parchment.
+   Native SVG is 2289x1744; we crop it via background-size + right-bottom anchoring
+   so the visible region matches the SVG overlay's viewBox of 850 400 1439 1344
+   (drops Hawaii + empty Pacific on the left, trims unused space at the top). */
 .realms-map__basemap {
   position: absolute;
   inset: 1rem;
-  width: calc(100% - 2rem);
-  height: calc(100% - 2rem);
-  object-fit: contain;
+  background-image: url('img/north-america.svg');
+  background-repeat: no-repeat;
+  background-size: 159.07% 129.76%;
+  background-position: right bottom;
   filter:
-    invert(1)
-    sepia(0.75)
-    hue-rotate(-12deg)
-    saturate(1.4)
+    sepia(0.85)
+    saturate(1.5)
+    hue-rotate(-15deg)
     brightness(0.55)
-    contrast(1.05);
-  opacity: 0.62;
+    contrast(1.1);
+  opacity: 0.72;
   /* radial fade so the edges blend into the section instead of cutting hard */
-  -webkit-mask-image: radial-gradient(ellipse 80% 90% at 50% 50%, #000 60%, transparent 100%);
-          mask-image: radial-gradient(ellipse 80% 90% at 50% 50%, #000 60%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 95% 100% at 50% 50%, #000 75%, transparent 100%);
+          mask-image: radial-gradient(ellipse 95% 100% at 50% 50%, #000 75%, transparent 100%);
   pointer-events: none;
   z-index: 0;
 }
