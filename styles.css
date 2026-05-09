@@ -1023,8 +1023,8 @@ input, textarea, button, a, [data-cursor="true"] { cursor: none; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* Crop & center on the archer's torso/face */
-  object-position: 65% 35%;
+  /* Per-card override via --photo-pos; default crops the archer */
+  object-position: var(--photo-pos, 65% 35%);
   filter: saturate(0.85) contrast(1.05) sepia(0.18);
 }
 /* darken the photo so the card text remains legible */
